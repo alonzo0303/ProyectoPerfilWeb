@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alsha Group | Creamos, diseñamos y arreglamos tu página web</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
@@ -20,7 +21,9 @@
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Servicios</a>
-            <a href="#clientes">Clientes</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#faq">FAQ</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -80,28 +83,27 @@
     </section>
 
     <!-- SECCIÓN NOSOTROS -->
-    <!-- SECCIÓN NOSOTROS (VALORES DE LA EMPRESA) -->
-<section id="nosotros" class="seccion-nosotros">
-    <div class="container">
-        <h2>Nuestra visión es construir marcas de clase mundial</h2>
-        <p>Transformamos ideas de negocio en productos digitales excepcionales basados en datos.</p>
-        
-        <div class="valores-grid">
-            <div class="item-valor">
-                <h4>⚡ Apasionados por el trabajo</h4>
-                <p>Sentimos entusiasmo y alegría por lo que hacemos cada día.</p>
-            </div>
-            <div class="item-valor">
-                <h4>😊 Equipo creativo</h4>
-                <p>Diseñamos soluciones que impulsan marcas y generan resultados.</p>
-            </div>
-            <div class="item-valor">
-                <h4>💎 Productos de calidad</h4>
-                <p>La calidad se mide en qué tan bien satisfacemos las necesidades de nuestros clientes.</p>
+    <section id="nosotros" class="seccion-nosotros">
+        <div class="container">
+            <h2>Nuestra visión es construir marcas de clase mundial</h2>
+            <p>Transformamos ideas de negocio en productos digitales excepcionales basados en datos.</p>
+            
+            <div class="valores-grid">
+                <div class="item-valor">
+                    <h4>⚡ Apasionados por el trabajo</h4>
+                    <p>Sentimos entusiasmo y alegría por lo que hacemos cada día.</p>
+                </div>
+                <div class="item-valor">
+                    <h4>😊 Equipo creativo</h4>
+                    <p>Diseñamos soluciones que impulsan marcas y generan resultados.</p>
+                </div>
+                <div class="item-valor">
+                    <h4>💎 Productos de calidad</h4>
+                    <p>La calidad se mide en qué tan bien satisfacemos las necesidades de nuestros clientes.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- SECCIÓN SERVICIOS -->
     <section id="servicios" class="seccion-servicios">
@@ -129,7 +131,70 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CLIENTES -->
+    <!-- SECCIÓN PROCESO DE TRABAJO -->
+    <section id="proceso" class="seccion-proceso">
+        <div class="container">
+            <h2>¿Cómo trabajamos?</h2>
+            <p>Un proceso estructurado de 4 pasos para llevar tu idea al éxito digital.</p>
+            
+            <div class="proceso-grid">
+                <div class="card-proceso">
+                    <div class="paso-numero">1</div>
+                    <h3>Consulta Inicial</h3>
+                    <p>Nos reunimos para conocer tus objetivos, tu marca y definir el alcance de tu proyecto.</p>
+                </div>
+                <div class="card-proceso">
+                    <div class="paso-numero">2</div>
+                    <h3>Diseño & Propuesta</h3>
+                    <p>Diseñamos prototipos adaptados a tu estilo y estructuramos la experiencia del usuario.</p>
+                </div>
+                <div class="card-proceso">
+                    <div class="paso-numero">3</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Construimos tu plataforma utilizando tecnologías modernas, rápidas y seguras.</p>
+                </div>
+                <div class="card-proceso">
+                    <div class="paso-numero">4</div>
+                    <h3>Lanzamiento & Soporte</h3>
+                    <p>Desplegamos tu web, realizamos pruebas de calidad y te capacitamos para administrarla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TESTIMONIOS -->
+    <section id="testimonios" class="seccion-testimonios">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p>La satisfacción de nuestros clientes es nuestro mejor respaldo.</p>
+            
+            <div class="testimonios-grid">
+                <div class="card-testimonio">
+                    <p class="testimonio-texto">"Alsha Group renovó por completo nuestra presencia web. La atención fue rápida, personalizada y el resultado superó nuestras expectativas."</p>
+                    <div class="testimonio-autor">
+                        <h4>Carlos Mendoza</h4>
+                        <span>Emprendedor Digital</span>
+                    </div>
+                </div>
+                <div class="card-testimonio">
+                    <p class="testimonio-texto">"Gracias a su desarrollo a medida, optimizamos nuestro proceso de consultas y aumentamos las ventas por WhatsApp considerablemente."</p>
+                    <div class="testimonio-autor">
+                        <h4>Sonia Gutiérrez</h4>
+                        <span>Gerente Comercial</span>
+                    </div>
+                </div>
+                <div class="card-testimonio">
+                    <p class="testimonio-texto">"Excelente trabajo profesional y puntualidad en la entrega. Altamente recomendados para cualquier proyecto de software o web."</p>
+                    <div class="testimonio-autor">
+                        <h4>Miguel Ramos</h4>
+                        <span>Consultor IT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CLIENTES Y CIFRAS -->
     <section id="clientes" class="seccion-clientes">
         <div class="container">
             <h2>Portafolio y Clientes</h2>
@@ -147,6 +212,41 @@
         </div>
     </section>
 
+    <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="seccion-faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <p>Resolvemos tus dudas antes de iniciar tu proyecto.</p>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto tiempo toma desarrollar una página web? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>El tiempo promedio depende del alcance. Landing pages sencillas pueden entregarse en 3 a 5 días, mientras que sistemas web a medida pueden tomar de 2 a 4 semanas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Incluyen hosting y dominio en el servicio? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, te asesoramos en la elección, configuración e integración completa de tu hosting y dominio para que no tengas que preocuparte por aspectos técnicos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿La página web será adaptable a teléfonos móviles? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Todos nuestros desarrollos son 100% responsivos (responsive design), garantizando que se vean perfectos en celulares, tablets y computadoras.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Brindan soporte técnico posterior al lanzamiento? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos garantía y planes de mantenimiento continuo para asegurar que tu página siempre esté actualizada y funcionando sin problemas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN CONTACTO -->
     <section id="contacto" class="seccion-contacto">
         <div class="container">
@@ -159,8 +259,46 @@
         </div>
     </section>
 
-    <!-- SCRIPT CARRUSEL INTERACTIVO -->
+    <!-- FOOTER COMPLETO -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="company-name">ALSHA GROUP</span>
+                <p>Soluciones digitales a medida para hacer crecer tu marca.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <h4>Contacto & Redes</h4>
+                <p>📍 Lima, Perú</p>
+                <p>📱 +51 932 341 719</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Alsha Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/51932341719?text=Hola%20Alsha%20Group,%20quisiera%20consultar%20sobre%20un%20proyecto." 
+       class="whatsapp-flotante" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       title="Chatea con nosotros por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path d="M16 2a14 14 0 0 0-12.1 21L2 30l7.2-1.9A14 14 0 1 0 16 2zm0 25.5a11.4 11.4 0 0 1-5.8-1.6l-.4-.2-4.3 1.1 1.1-4.2-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3 0s-.6.2-.8.5-.8 1-1 1.2c-.2.2-.4.2-.7.1a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6v-.6c-.1-.2-.8-2-.9-2.3-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.3 1.4.5 1.9.7.8.2 1.6.2 2.2.1.7-.1 2.1-.8 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.4z" fill="#FFF"/>
+        </svg>
+    </a>
+
+    <!-- SCRIPTS INTERACTIVOS -->
     <script>
+        // Carrusel Hero
         let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -179,20 +317,19 @@
             if (dots[currentSlideIndex]) dots[currentSlideIndex].classList.add('active');
         }
 
-        function nextSlide() {
-            showSlide(currentSlideIndex + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlideIndex - 1);
-        }
-
-        function goToSlide(index) {
-            showSlide(index);
-        }
-
-        // Transición automática cada 5 segundos
+        function nextSlide() { showSlide(currentSlideIndex + 1); }
+        function prevSlide() { showSlide(currentSlideIndex - 1); }
+        function goToSlide(index) { showSlide(index); }
         setInterval(nextSlide, 5000);
+
+        // Acordeón FAQ
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>

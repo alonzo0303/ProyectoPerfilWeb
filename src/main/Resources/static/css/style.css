@@ -65,14 +65,14 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: opacity 0.2s;
 }
 
@@ -88,7 +88,7 @@ section {
 
 section h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: #1a1a2e;
     margin-bottom: 15px;
 }
@@ -96,8 +96,8 @@ section h2 {
 section > .container > p {
     text-align: center;
     color: #555;
-    font-size: 1.1rem;
-    margin-bottom: 50px;
+    font-size: 1.05rem;
+    margin-bottom: 45px;
 }
 
 /* --- CARRUSEL DESPLEGABLE (HERO SECTION) --- */
@@ -112,7 +112,7 @@ section > .container > p {
 
 .carousel-wrapper {
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     min-height: 480px;
@@ -149,14 +149,14 @@ section > .container > p {
 }
 
 .slide-text h1, .slide-text h2 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     color: #1a1a2e;
     margin-bottom: 15px;
     line-height: 1.25;
 }
 
 .slide-text p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #555;
     margin-bottom: 25px;
     line-height: 1.5;
@@ -174,7 +174,7 @@ section > .container > p {
 }
 
 .slide-image img, .logo-grande-ag {
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
     object-fit: contain;
 }
@@ -194,12 +194,12 @@ section > .container > p {
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Flechas laterales */
+/* Flechas laterales posicionadas fuera del contenido */
 .arrow-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(155, 114, 207, 0.7);
+    background: rgba(155, 114, 207, 0.85);
     color: white;
     border: none;
     padding: 12px 16px;
@@ -207,15 +207,17 @@ section > .container > p {
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .arrow-btn:hover {
     background: #845ec2;
+    transform: translateY(-50%) scale(1.1);
 }
 
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
+.prev-btn { left: -25px; }
+.next-btn { right: -25px; }
 
 /* Indicadores de puntos */
 .carousel-indicators {
@@ -248,7 +250,7 @@ section > .container > p {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* --- SECCIÓN NOSOTROS --- */
+/* --- NOSOTROS --- */
 .seccion-nosotros {
     text-align: center;
     background-color: #fcfcfc;
@@ -258,7 +260,6 @@ section > .container > p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin-top: 40px;
     text-align: left;
 }
 
@@ -285,8 +286,8 @@ section > .container > p {
 /* --- SERVICIOS --- */
 .grid-servicios {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
     text-align: left;
 }
 
@@ -305,15 +306,103 @@ section > .container > p {
 }
 
 .card-servicio h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #1a1a2e;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .card-servicio p {
     color: #666;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.5;
+}
+
+/* --- PROCESO DE TRABAJO --- */
+.seccion-proceso {
+    background-color: #f8f9fa;
+}
+
+.proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card-proceso {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #eef0f2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+.paso-numero {
+    width: 45px;
+    height: 45px;
+    background-color: #6c5ce7;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.card-proceso h3 {
+    font-size: 1.15rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.card-proceso p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- TESTIMONIOS --- */
+.seccion-testimonios {
+    background-color: #ffffff;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card-testimonio {
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonio-texto {
+    font-style: italic;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonio-autor h4 {
+    font-size: 1rem;
+    color: #1a1a2e;
+}
+
+.testimonio-autor span {
+    font-size: 0.82rem;
+    color: #6c5ce7;
+    font-weight: 500;
 }
 
 /* --- CLIENTES --- */
@@ -322,7 +411,6 @@ section > .container > p {
     justify-content: center;
     gap: 60px;
     text-align: center;
-    margin-top: 30px;
 }
 
 .stat-box h3 {
@@ -332,14 +420,77 @@ section > .container > p {
 }
 
 .stat-box p {
-    color: #b2bec3;
+    color: #888;
     font-size: 1rem;
+}
+
+/* --- PREGUNTAS FRECUENTES (FAQ) --- */
+.seccion-faq {
+    background-color: #f8f9fa;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-icon {
+    font-size: 1.3rem;
+    color: #6c5ce7;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+    background-color: #fafbfc;
+}
+
+.faq-answer p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-bottom: 18px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-top: 5px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45px);
 }
 
 /* --- CONTACTO Y BOTONES --- */
 .seccion-contacto {
     text-align: center;
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .btn-impulsar {
@@ -359,6 +510,91 @@ section > .container > p {
     transform: translateY(-2px);
 }
 
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #1a1a2e;
+    color: #a0aec0;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-brand .company-name {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-links h4, .footer-social h4 {
+    color: white;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    display: block;
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #9b72cf;
+}
+
+.footer-social p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2d3748;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+}
+
+/* --- BOTÓN FLOTANTE WHATSAPP --- */
+.whatsapp-flotante {
+    position: fixed;
+    width: 58px;
+    height: 58px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+
+.whatsapp-icon {
+    width: 34px;
+    height: 34px;
+}
+
 @media (max-width: 768px) {
     .slide-content {
         flex-direction: column;
@@ -366,5 +602,11 @@ section > .container > p {
     }
     .arrow-btn {
         display: none;
+    }
+    .navbar {
+        padding: 10px 20px;
+    }
+    .nav-links {
+        display: none; /* Podrás habilitar un menú hamburguesa más adelante */
     }
 }
