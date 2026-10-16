@@ -25,45 +25,85 @@
         </nav>
     </header>
 
-    <!-- SECCIÓN DE BIENVENIDA (Banner Principal) -->
-    <section id="inicio" class="banner-principal">
-        <div class="container">
-            <div class="bienvenida-grid">
-                <div class="logo-bienvenida-box">
-                    <img th:src="@{/imagenes/LogoAlsha.png}" alt="Alsha Group Logo Profesional" class="logo-grande-ag">
+    <!-- SECCIÓN INICIO: CARRUSEL DESPLEGABLE PRINCIPAL -->
+    <section id="inicio" class="hero-carousel-section">
+        <div class="carousel-wrapper">
+            <div class="carousel-track">
+                
+                <!-- SLIDE 1: ALSHA GROUP -->
+                <div class="slide slide-1 active">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h1>Nos enfocamos en hacer crecer tu marca personal.</h1>
+                            <p>Desarrollamos soluciones a medida.</p>
+                            <a href="https://wa.me/51932341719?text=Hola%20Alsha%20Group,%20quiero%20impulsar%20mi%20proyecto%20web." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn-impulsar">¡Impulsar! 🚀</a>
+                        </div>
+                        <div class="slide-image">
+                            <img th:src="@{/imagenes/LogoAlsha.png}" alt="Alsha Group Logo" class="logo-grande-ag">
+                        </div>
+                    </div>
                 </div>
-                <div class="texto-bienvenida-box">
-                    <h1>Nos enfocamos en hacer crecer tu marca personal. Desarrollamos soluciones a medida.</h1>
-                    <a href="#contacto" class="btn-impulsar">¡Impulsar! </a>
+
+                <!-- SLIDE 2: CONOCE AL FUNDADOR -->
+                <div class="slide slide-2">
+                    <div class="slide-content">
+                        <div class="slide-image-perfil">
+                            <img th:src="@{/imagenes/mi-foto.jpg}" alt="Foto del Fundador" class="foto-perfil-hero">
+                        </div>
+                        <div class="slide-text">
+                            <span class="badge-exp">2 años de experiencia</span>
+                            <h2>Conoce al Fundador</h2>
+                            <p>Ingeniero de Sistemas especializado en desarrollo web, Spring Boot, Java y soluciones digitales a medida.</p>
+                            <a href="https://wa.me/51932341719?text=Hola,%20quisiera%20mas%20informacion%20sobre%20tus%20servicios." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn-impulsar">Chatear con el Asesor 🚀</a>
+                        </div>
+                    </div>
                 </div>
+
+            </div>
+
+            <!-- Flechas de navegación -->
+            <button class="arrow-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow-btn next-btn" onclick="nextSlide()">&#10095;</button>
+
+            <!-- Puntos indicadores inferiores -->
+            <div class="carousel-indicators">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN NOSOTROS / VISIÓN -->
-    <section id="nosotros" class="seccion-nosotros">
-        <div class="container">
-            <h2>Nuestra visión es construir marcas de clase mundial</h2>
-            <p>Transformamos ideas de negocio en productos digitales excepcionales basados en datos.</p>
-            
-            <div class="valores-grid">
-                <div class="item-valor">
-                    <h4>Apasionados por el trabajo</h4>
-                    <p>Sentimos entusiasmo y alegría por lo que hacemos cada día.</p>
-                </div>
-                <div class="item-valor">
-                    <h4>Equipo creativo</h4>
-                    <p>Diseñamos soluciones que impulsan marcas y generan resultados.</p>
-                </div>
-                <div class="item-valor">
-                    <h4> Productos de calidad</h4>
-                    <p>La calidad se mide en qué tan bien satisfacemos las necesidades de nuestros clientes.</p>
-                </div>
+    <!-- SECCIÓN NOSOTROS -->
+    <!-- SECCIÓN NOSOTROS (VALORES DE LA EMPRESA) -->
+<section id="nosotros" class="seccion-nosotros">
+    <div class="container">
+        <h2>Nuestra visión es construir marcas de clase mundial</h2>
+        <p>Transformamos ideas de negocio en productos digitales excepcionales basados en datos.</p>
+        
+        <div class="valores-grid">
+            <div class="item-valor">
+                <h4>⚡ Apasionados por el trabajo</h4>
+                <p>Sentimos entusiasmo y alegría por lo que hacemos cada día.</p>
+            </div>
+            <div class="item-valor">
+                <h4>😊 Equipo creativo</h4>
+                <p>Diseñamos soluciones que impulsan marcas y generan resultados.</p>
+            </div>
+            <div class="item-valor">
+                <h4>💎 Productos de calidad</h4>
+                <p>La calidad se mide en qué tan bien satisfacemos las necesidades de nuestros clientes.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECCIÓN: SERVICIOS -->
+    <!-- SECCIÓN SERVICIOS -->
     <section id="servicios" class="seccion-servicios">
         <div class="container">
             <h2>Todos los servicios que tu negocio necesita</h2>
@@ -89,7 +129,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: CLIENTES / PORTAFOLIO -->
+    <!-- SECCIÓN CLIENTES -->
     <section id="clientes" class="seccion-clientes">
         <div class="container">
             <h2>Portafolio y Clientes</h2>
@@ -107,14 +147,52 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: CONTACTO -->
+    <!-- SECCIÓN CONTACTO -->
     <section id="contacto" class="seccion-contacto">
         <div class="container">
             <h2>¿Listo para impulsar tu marca?</h2>
             <p>Escríbenos o llámanos para conversar sobre tu proyecto web.</p>
-            <a href="/contacto" class="btn-impulsar">Chatear con un Asesor 🚀</a>
+            <a href="https://wa.me/51932341719?text=Hola%20Alsha%20Group,%20quiero%20impulsar%20mi%20proyecto%20web." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-impulsar">Chatear con un Asesor 🚀</a>
         </div>
     </section>
 
+    <!-- SCRIPT CARRUSEL INTERACTIVO -->
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlideIndex = 0;
+            else if (index < 0) currentSlideIndex = slides.length - 1;
+            else currentSlideIndex = index;
+
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (dots[i]) dots[i].classList.remove('active');
+            });
+
+            slides[currentSlideIndex].classList.add('active');
+            if (dots[currentSlideIndex]) dots[currentSlideIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlideIndex - 1);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Transición automática cada 5 segundos
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 </html>
