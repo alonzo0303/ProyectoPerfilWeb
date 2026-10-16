@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN FIJA -->
+    <!-- BARRA DE NAVEGACIÓN FIJA (SOLO LOS 4 PRIMEROS) -->
     <header class="navbar">
         <div class="nav-brand">
             <img th:src="@{/imagenes/LogoAlsha.png}" alt="Alsha Group Logo" class="logo-img">
@@ -21,10 +21,7 @@
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Servicios</a>
-            <a href="#proceso">Proceso</a>
-            <a href="#testimonios">Testimonios</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#clientes">Clientes</a>
         </nav>
     </header>
 
@@ -212,7 +209,19 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- SECCIÓN CONTACTO / IMPULSAR TU MARCA (AHORA ANTES DE FAQ) -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="container">
+            <h2>¿Listo para impulsar tu marca?</h2>
+            <p>Escríbenos o llámanos para conversar sobre tu proyecto web.</p>
+            <a href="https://wa.me/51932341719?text=Hola%20Alsha%20Group,%20quiero%20impulsar%20mi%20proyecto%20web." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-impulsar">Chatear con un Asesor 🚀</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQ - AHORA AL FINAL) -->
     <section id="faq" class="seccion-faq">
         <div class="container">
             <h2>Preguntas Frecuentes</h2>
@@ -247,18 +256,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="seccion-contacto">
-        <div class="container">
-            <h2>¿Listo para impulsar tu marca?</h2>
-            <p>Escríbenos o llámanos para conversar sobre tu proyecto web.</p>
-            <a href="https://wa.me/51932341719?text=Hola%20Alsha%20Group,%20quiero%20impulsar%20mi%20proyecto%20web." 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="btn-impulsar">Chatear con un Asesor 🚀</a>
-        </div>
-    </section>
-
     <!-- FOOTER COMPLETO -->
     <footer class="site-footer">
         <div class="container footer-content">
@@ -271,8 +268,7 @@
                 <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#proceso">Proceso</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#clientes">Clientes</a>
             </div>
             <div class="footer-social">
                 <h4>Contacto & Redes</h4>
