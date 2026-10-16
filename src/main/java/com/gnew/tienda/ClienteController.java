@@ -10,4 +10,10 @@ public class ClienteController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/contacto")
+    public String mostrarContacto() {
+        return "contactos/contactos";
+    }
+
 }

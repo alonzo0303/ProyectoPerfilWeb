@@ -610,3 +610,46 @@ section > .container > p {
         display: none; /* Podrás habilitar un menú hamburguesa más adelante */
     }
 }
+/* --- ESTILOS DE BOTONES DE REDES SOCIALES EN EL FOOTER --- */
+.redes-sociales-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #2d3748;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px) scale(1.08);
+    color: #ffffff;
+}
+
+/* Colores personalizados al pasar el mouse por cada red */
+.social-btn.tiktok:hover {
+    background-color: #000000;
+    box-shadow: 0 0 12px rgba(254, 44, 85, 0.6);
+}
+
+.social-btn.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-btn.facebook:hover {
+    background-color: #1877f2;
+}
+
+.social-btn.linkedin:hover {
+    background-color: #0a66c2;
+}
