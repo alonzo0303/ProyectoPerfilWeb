@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Herramientas frontend y configuración local
+node_modules/
+.env
+.env.*
+!.env.example
