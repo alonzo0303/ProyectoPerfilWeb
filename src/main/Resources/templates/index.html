@@ -263,42 +263,105 @@
         </section>
 
     <!-- SECCIÓN: SOBRE MÍ (03) -->
-    <section id="sobre-mi" class="py-24 px-6 border-t border-slate-900 bg-[#0d121f]">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start">
+    <!-- SOBRE MÍ: presentación y foto arriba; valores abajo -->
+<section id="sobre-mi"
+         class="py-24 px-6 border-t border-slate-900 bg-[#0d121f]">
+
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Primera fila: presentación y fotografía -->
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+            <!-- Presentación -->
             <div class="lg:col-span-7 space-y-6">
-                <span class="text-xs font-mono text-purple-400 tracking-widest block">03 / LA PERSONA DETRÁS DE ALSHA</span>
+                <span class="text-xs font-mono text-purple-400 tracking-widest block">
+                    03 / LA PERSONA DETRÁS DE ALSHA
+                </span>
+
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-                    Hola, soy Gustavo Montes. Construyo soluciones digitales para ti y tu negocio.
+                    Hola, soy Gustavo Montes. Construyo soluciones digitales
+                    para ti y tu negocio.
                 </h2>
+
                 <div class="space-y-4 text-slate-400 text-sm leading-relaxed">
                     <p>
-                        Soy Gustavo Alonzo Montes Altamirano, Ingeniero de Sistemas e Informática. Me enfoco en el desarrollo web y la gestión de bases de datos. También tengo conocimientos de Angular, PHP, SQL, CSS y C++. Desarrollo proyectos para aplicar estos conocimientos en páginas web y sistemas de gestión. Además, soy fundador de Alsha Group, un proyecto donde impulsamos la digitalización de negocios con tecnología robusta y arquitectura moderna.
+                        Soy Gustavo Alonzo Montes Altamirano.
+                        Me enfoco en el desarrollo web y la gestión de bases
+                        de datos. También tengo conocimientos de Angular,
+                        PHP, SQL, CSS y C++. Desarrollo proyectos para aplicar
+                        estos conocimientos en páginas web y sistemas de gestión.
+                        Además, soy fundador de Alsha Group, un proyecto donde
+                        impulsamos la digitalización de negocios con tecnología
+                        robusta y arquitectura moderna.
                     </p>
+
                     <p>
-                        Alsha Group nace de mi interés por crear herramientas que hagan más sencillo el trabajo de las personas y los negocios. Combino lo que aprendo con proyectos propios y una forma práctica de trabajar: entender, construir y mejorar.
+                        Alsha Group nace de mi interés por crear herramientas
+                        que hagan más sencillo el trabajo de las personas y
+                        los negocios. Combino lo que aprendo con proyectos
+                        propios y una forma práctica de trabajar:
+                        entender, construir y mejorar.
                     </p>
                 </div>
             </div>
 
-            <div class="lg:col-span-5 space-y-4">
-                <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
-                    <span class="text-xs font-mono text-purple-400 block mb-2">01</span>
-                    <h3 class="text-white font-bold mb-1">Entender antes de construir</h3>
-                    <p class="text-xs text-slate-400">El mejor punto de partida es una necesidad clara.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
-                    <span class="text-xs font-mono text-purple-400 block mb-2">02</span>
-                    <h3 class="text-white font-bold mb-1">Cuidar la experiencia</h3>
-                    <p class="text-xs text-slate-400">Una solución debe ser útil y fácil de usar.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
-                    <span class="text-xs font-mono text-purple-400 block mb-2">03</span>
-                    <h3 class="text-white font-bold mb-1">Seguir aprendiendo</h3>
-                    <p class="text-xs text-slate-400">Cada proyecto es una oportunidad para hacerlo mejor.</p>
-                </div>
+            <!-- Fotografía -->
+            <div class="lg:col-span-5">
+                <img src="/imagenes/gustavo-perfil.png"
+                     th:src="@{/imagenes/gustavo-perfil.png}"
+                     alt="Gustavo Montes, fundador de Alsha Group"
+                     width="1254"
+                     height="1254"
+                     loading="lazy"
+                     decoding="async"
+                     class="w-full max-w-sm mx-auto rounded-2xl border border-slate-800">
             </div>
+
         </div>
-    </section>
+
+        <!-- Segunda fila: las tres tarjetas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+
+            <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
+                <span class="text-xs font-mono text-purple-400 block mb-2">
+                    01
+                </span>
+                <h3 class="text-white font-bold mb-1">
+                    Entender antes de construir
+                </h3>
+                <p class="text-xs text-slate-400">
+                    El mejor punto de partida es una necesidad clara.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
+                <span class="text-xs font-mono text-purple-400 block mb-2">
+                    02
+                </span>
+                <h3 class="text-white font-bold mb-1">
+                    Cuidar la experiencia
+                </h3>
+                <p class="text-xs text-slate-400">
+                    Una solución debe ser útil y fácil de usar.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
+                <span class="text-xs font-mono text-purple-400 block mb-2">
+                    03
+                </span>
+                <h3 class="text-white font-bold mb-1">
+                    Seguir aprendiendo
+                </h3>
+                <p class="text-xs text-slate-400">
+                    Cada proyecto es una oportunidad para hacerlo mejor.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <!-- SECCIÓN: BASE TÉCNICA (04) -->
     <section class="py-24 px-6 border-t border-slate-900 bg-[#0b0f19]">
