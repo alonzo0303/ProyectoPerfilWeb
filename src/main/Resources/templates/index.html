@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alsha Group | Software & Soluciones Digitales</title>
-    <link rel="icon" type="image/png" href="../imagenes/LogoAlsha.png" th:href="@{/imagenes/LogoAlsha.png}">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/webp" href="../imagenes/logo.webp" th:href="@{/imagenes/logo.webp}">
+    <!-- CSS compilado: editar frontend/input.css y ejecutar npm run build:css. -->
+    <link rel="stylesheet" href="/css/site.css" th:href="@{/css/site.css}">
+    <meta name="description" content="Alsha Group: desarrollo de páginas web, perfiles profesionales y software a medida en Perú. Solicita una cotización o información de ALSHAFACTURAS.">
+    <meta property="og:title" content="Alsha Group | Software y soluciones digitales">
+    <meta property="og:description" content="Páginas web para tu negocio y soluciones a medida. Conoce ALSHAFACTURAS y solicita información.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta name="theme-color" content="#0b0f19">
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
 </head>
 <body class="bg-[#0b0f19] text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white">
 
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
     <!-- HEADER / NAVBAR -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-               <img src="../imagenes/LogoAlsha.png" th:src="@{/imagenes/LogoAlsha.png}" alt="Logo Alsha Group" class="w-9 h-9 object-contain rounded-lg">
+            <a href="#inicio" class="flex items-center gap-2 sm:gap-3" aria-label="Alsha Group, inicio">
+               <img src="../imagenes/logo.webp" th:src="@{/imagenes/logo.webp}" alt="Logo Alsha Group" width="66" height="36" class="w-10 sm:w-auto h-9 object-contain rounded-lg">
                 <div>
-                    <span class="text-base font-extrabold tracking-wider text-white block leading-none">ALSHA GROUP</span>
-                    <span class="text-[10px] text-slate-400 tracking-wider block mt-1">SOFTWARE & SOLUCIONES DIGITALES</span>
+                    <span class="text-[13px] sm:text-base font-extrabold tracking-wider text-white block leading-none">ALSHA GROUP</span>
+                    <span class="text-[8px] sm:text-[10px] text-slate-400 tracking-wider block mt-1">SOFTWARE & SOLUCIONES DIGITALES</span>
                 </div>
             </a>
             
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#soluciones" class="hover:text-purple-400 transition">Soluciones</a>
+            <nav aria-label="Navegación principal" class="hidden lg:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#soluciones" class="hover:text-purple-400 transition">Servicios y productos</a>
                 <a href="#proyectos" class="hover:text-purple-400 transition">Proyectos</a>
                 <a href="#sobre-mi" class="hover:text-purple-400 transition">Sobre mí</a>
                 <a href="#contacto" class="hover:text-purple-400 transition">Contacto</a>
             </nav>
 
-            <a href="#contacto" class="hidden md:flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-transparent text-white border border-slate-700 rounded-xl hover:border-purple-400 hover:bg-purple-500/10 transition">
-                Contáctanos <i class="fa-solid fa-arrow-up-right text-[10px]"></i>
+            <a href="#contacto" class="hidden lg:flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-transparent text-white border border-slate-700 rounded-xl hover:border-purple-400 hover:bg-purple-500/10 transition">
+                Contáctanos <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
         </div>
+        <button id="menu-toggle" type="button" class="lg:hidden absolute right-6 top-6 px-3 py-1 rounded-lg border border-slate-700" aria-controls="menu-movil" aria-expanded="false">Menú</button>
+        <nav id="menu-movil" aria-label="Navegación móvil" class="lg:hidden px-6 pb-5" hidden>
+            <a class="block py-3" href="#soluciones">Servicios y productos</a>
+            <a class="block py-3" href="#proyectos">ALSHAFACTURAS</a>
+            <a class="block py-3" href="#sobre-mi">Sobre mí</a>
+            <a class="block py-3" href="#contacto">Solicitar una cotización</a>
+        </nav>
     </header>
+    <main id="contenido">
 
     <!-- HERO SECTION -->
-    <section class="min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+    <section id="inicio" class="min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
             
             <!-- Hero Text -->
@@ -44,14 +60,14 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span> AGENCIA DE SOFTWARE &bull; PERÚ
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
-                    Tu siguiente gran idea, <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">hecha software.</span>
+                    Haz crecer tu negocio con <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">soluciones digitales.</span>
                 </h1>
                 <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
                     Creamos páginas web y soluciones digitales para personas y negocios. De tu presencia profesional a las herramientas que hacen crecer tu empresa.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
                     <a href="#soluciones" class="px-6 py-3.5 rounded-xl font-medium bg-purple-400 text-slate-950 hover:bg-purple-300 transition shadow-lg shadow-purple-500/20 flex items-center gap-2">
-                        Explorar soluciones <i class="fa-solid fa-arrow-down text-xs"></i>
+                        Explorar soluciones <i aria-hidden="true" class="fa-solid fa-arrow-down text-xs"></i>
                     </a>
                     <a href="#sobre-mi" class="px-6 py-3.5 rounded-xl font-medium bg-slate-900/80 text-slate-300 border border-slate-800 hover:bg-slate-800 transition">
                         Conoce quién está detrás &rarr;
@@ -82,7 +98,7 @@
 <span class="text-slate-400">10</span>  };</code></pre>
                     <div class="mt-4 p-3 rounded-xl bg-[#141b2d] border border-slate-800 flex items-center justify-between text-xs">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-code-commit text-purple-400"></i>
+                            <i aria-hidden="true" class="fa-solid fa-code-commit text-purple-400"></i>
                             <span class="text-slate-300 font-medium">Construyendo paso a paso</span>
                         </div>
                         <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
@@ -114,7 +130,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 block">01 / Soluciones para tu siguiente paso</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Una solución para cada idea.</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Servicios y productos para tu negocio.</h2>
                 </div>
                 <p class="text-slate-400 text-sm max-w-md">Servicios a medida y productos propios. Encuentra por dónde empezar.</p>
             </div>
@@ -124,21 +140,21 @@
                 <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
                     <div>
                         <div class="h-44 w-full overflow-hidden bg-slate-950">
-                            <img src="../imagenes/perfilweb.jpg" th:src="@{/imagenes/perfilweb.jpg}" alt="Presencia Digital" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+                            <img src="../imagenes/perfilweb.webp" th:src="@{/imagenes/perfilweb.webp}" alt="Presencia Digital" class="w-full h-full object-cover opacity-[0.85] hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="960" height="600">
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">01 / Presencia Digital</span>
                             <h3 class="text-xl font-bold text-white mb-2">Tu perfil, en la web.</h3>
                             <p class="text-slate-400 text-xs mb-4">Una página profesional para presentar quién eres, mostrar tu trabajo y facilitar que te contacten.</p>
                             <ul class="space-y-2 text-xs text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Diseño adaptable a celulares</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Proyectos, servicios y presentación</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Enlaces a tus canales de contacto</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Diseño adaptable a celulares</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Proyectos, servicios y presentación</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Enlaces a tus canales de contacto</li>
                             </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <a href="#contacto" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Consultar Perfil Web</a>
+                        <a href="#contacto" data-servicio="Perfil profesional" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Solicitar mi perfil web</a>
                     </div>
                 </div>
 
@@ -146,21 +162,21 @@
                 <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
                     <div>
                         <div class="h-44 w-full overflow-hidden bg-slate-950">
-                            <img src="../imagenes/paginaweb.jpg" th:src="@{/imagenes/paginaweb.jpg}" alt="Negocios Digitales" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+                            <img src="../imagenes/paginaweb.webp" th:src="@{/imagenes/paginaweb.webp}" alt="Negocios Digitales" class="w-full h-full object-cover opacity-[0.85] hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="554" height="554">
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">02 / Negocios Digitales</span>
                             <h3 class="text-xl font-bold text-white mb-2">Tu negocio, más cerca.</h3>
                             <p class="text-slate-400 text-xs mb-4">Sitios institucionales, landing pages y tiendas e-commerce pensados para tu oferta y tus clientes.</p>
                             <ul class="space-y-2 text-xs text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Estructura y diseño de tu sitio</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Catálogo de productos o servicios</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Integraciones según el alcance</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Estructura y diseño de tu sitio</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Catálogo de productos o servicios</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Integraciones según el alcance</li>
                             </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <a href="#contacto" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Cotizar mi Página</a>
+                        <a href="#contacto" data-servicio="Página web para negocio" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Cotizar mi página web</a>
                     </div>
                 </div>
 
@@ -169,21 +185,21 @@
                     <div>
                         <div class="h-44 w-full overflow-hidden bg-slate-950 relative">
                             <span class="absolute top-3 right-3 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-10 backdrop-blur-md">En desarrollo</span>
-                            <img src="../imagenes/facturas.jpg" th:src="@{/imagenes/facturas.jpg}" alt="Alshafacturas" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+                            <img src="../imagenes/facturas.webp" th:src="@{/imagenes/facturas.webp}" alt="Alshafacturas" class="w-full h-full object-cover opacity-[0.85] hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="1000" height="667">
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400 block mb-2">03 / Producto SaaS</span>
                             <h3 class="text-xl font-bold text-white mb-2">ALSHAFACTURAS</h3>
                             <p class="text-slate-400 text-xs mb-4">Nuestro sistema en construcción para bodegas, minimarkets y almacenes. Una plataforma para organizar la operación comercial.</p>
                             <ul class="space-y-2 text-xs text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Ventas y punto de venta como objetivo</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Inventarios y Kardex planificados</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Facturación electrónica planificada</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Ventas y punto de venta como objetivo</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Inventarios y Kardex planificados</li>
+                                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Facturación electrónica planificada</li>
                             </ul>
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <a href="#proyectos" class="block text-center py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition">Conocer el Proyecto</a>
+                        <a href="#proyectos" class="block text-center py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition">Conocer el SaaS</a>
                     </div>
                 </div>
             </div>
@@ -209,7 +225,8 @@
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Plataforma SaaS en desarrollo para la gestión de empresas, usuarios y suscripciones bajo arquitectura modular con Spring Boot y PostgreSQL.
                     </p>
-                    
+                    <p class="text-sm text-slate-300">¿Te interesa para tu negocio? Solicita información o acceso anticipado. La disponibilidad, las funciones y el precio se confirmarán antes de contratar; todavía no se activa una suscripción desde esta web.</p>
+                    <a href="#contacto" data-servicio="ALSHAFACTURAS SaaS" class="inline-block px-5 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold">Solicitar información del SaaS</a>
                     <div class="flex flex-wrap gap-2 pt-2">
                         <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">React</span>
                         <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">Spring Boot</span>
@@ -226,7 +243,7 @@
                         </div>
                         
                        <div class="relative group h-64 overflow-hidden">
-                            <img src="../imagenes/facturas.jpg" th:src="@{/imagenes/facturas.jpg}" alt="Dashboard AlshaFacturas" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+                            <img src="../imagenes/facturas.webp" th:src="@{/imagenes/facturas.webp}" alt="Dashboard AlshaFacturas" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="1000" height="667">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-6">
                                 <div class="space-y-2">
                                     <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg backdrop-blur-sm">
@@ -235,7 +252,7 @@
                                     </div>
                                     <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg backdrop-blur-sm">
                                         <span class="text-[10px] text-slate-500 font-bold uppercase block">Acceso</span>
-                                        <span class="text-xs text-white font-semibold">Por roles y permisos (JWT)</span>
+                                        <span class="text-xs text-white font-semibold">Roles y permisos previstos</span>
                                     </div>
                                 </div>
                             </div>
@@ -251,11 +268,11 @@
             <div class="lg:col-span-7 space-y-6">
                 <span class="text-xs font-mono text-purple-400 tracking-widest block">03 / LA PERSONA DETRÁS DE ALSHA</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-                    Hola, soy Gustavo Montes. Construyo Alsha Group una desarrollo para ti.
+                    Hola, soy Gustavo Montes. Construyo soluciones digitales para ti y tu negocio.
                 </h2>
                 <div class="space-y-4 text-slate-400 text-sm leading-relaxed">
                     <p>
-                        Soy Gustavo Alonzo Montes Altamirano, Ingeniero en Sistemas. Estoy orientado en el desarrollo web y la gestión de bases de datos. También tengo conocimientos de Angular, PHP, SQL, CSS y C++. A lo largo de este tiempo me he especializado en crear soluciones tecnológicas a medida, desde páginas web modernas y sistemas de gestión hasta la automatización de procesos. Además, soy fundador de Alsha Group, un proyecto donde impulsamos la digitalización de negocios con tecnología robusta y arquitectura moderna.
+                        Soy Gustavo Alonzo Montes Altamirano, Ingeniero de Sistemas e Informática. Me enfoco en el desarrollo web y la gestión de bases de datos. También tengo conocimientos de Angular, PHP, SQL, CSS y C++. Desarrollo proyectos para aplicar estos conocimientos en páginas web y sistemas de gestión. Además, soy fundador de Alsha Group, un proyecto donde impulsamos la digitalización de negocios con tecnología robusta y arquitectura moderna.
                     </p>
                     <p>
                         Alsha Group nace de mi interés por crear herramientas que hagan más sencillo el trabajo de las personas y los negocios. Combino lo que aprendo con proyectos propios y una forma práctica de trabajar: entender, construir y mejorar.
@@ -299,7 +316,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-[#121826] p-8 rounded-3xl border border-slate-800">
                     <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-6">
-                        <i class="fa-solid fa-code"></i>
+                        <i aria-hidden="true" class="fa-solid fa-code"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Desarrollo web</h3>
                     <p class="text-slate-400 text-sm mb-6">Interfaces claras y aplicaciones con una estructura que pueda crecer.</p>
@@ -314,7 +331,7 @@
 
                 <div class="bg-[#121826] p-8 rounded-3xl border border-slate-800">
                     <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-6">
-                        <i class="fa-solid fa-database"></i>
+                        <i aria-hidden="true" class="fa-solid fa-database"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Backend y datos</h3>
                     <p class="text-slate-400 text-sm mb-6">Lógica de negocio, organización de información y conexión entre servicios.</p>
@@ -329,7 +346,7 @@
 
                 <div class="bg-[#121826] p-8 rounded-3xl border border-slate-800">
                     <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-6">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <i aria-hidden="true" class="fa-solid fa-screwdriver-wrench"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Soporte y herramientas</h3>
                     <p class="text-slate-400 text-sm mb-6">Resolución de incidencias y herramientas para desarrollar de forma ordenada.</p>
@@ -343,57 +360,48 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: CONTACTO Y APARTADO DE CORREO (Cumpliendo requerimiento y PDF de clases) -->
-    <!-- SECCIÓN CONTACTO -->
-        <section id="contacto" class="py-20 px-6 bg-slate-900/40 border-t border-slate-800/80">
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-white mb-4">Tu idea merece un buen comienzo.</h2>
-                <p class="text-slate-400">Déjanos tus datos si prefieres que te contactemos por correo o teléfono directamente.</p>
+    <!-- SOLICITUD COMERCIAL: no cobra, no crea cuentas y no confirma contrataciones. -->
+    <section id="contacto" class="py-20 px-6 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-white mb-4">Contáctanos y cuéntanos qué necesitas.</h2>
+            <p class="text-slate-400">Cotiza una página web, un proyecto a medida o solicita información de ALSHAFACTURAS. Te responderemos para definir alcance, precio y próximos pasos.</p>
+        </div>
+        <form id="solicitud-form" class="max-w-xl mx-auto bg-slate-900/80 p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl space-y-5">
+            <div>
+                <label for="servicio" class="block text-sm font-semibold mb-2">¿Qué te interesa? *</label>
+                <select id="servicio" name="servicio" required class="campo">
+                    <option value="">Selecciona un servicio o producto</option>
+                    <option>Perfil profesional</option><option>Página web para negocio</option>
+                    <option>Software a medida</option><option>ALSHAFACTURAS SaaS</option>
+                    <option>Soporte y mantenimiento</option>
+                </select>
             </div>
-
-            <!-- Contenedor del mensaje de éxito con tu texto exacto -->
-            <div id="mensaje-exito" class="hidden max-w-xl mx-auto mb-6 p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl text-center font-medium">
-                <i class="fa-solid fa-circle-check mr-2"></i> ¡Pronto nos contactaremos contigo!
+            <div id="saas-aviso" class="p-4 rounded-xl border border-purple-500/40 text-sm text-purple-200" hidden>
+                ALSHAFACTURAS está en desarrollo. Esta solicitud es para recibir información o consultar acceso anticipado; no activa un plan ni genera un cobro.
             </div>
-
-            <form action="https://formsubmit.co/gustavomontes2603@gmail.com" method="POST" class="max-w-xl mx-auto bg-slate-900/80 p-8 rounded-2xl border border-slate-800 shadow-xl space-y-5">
-                <!-- Redirección para mantenerse en la propia página web -->
-                <input type="hidden" name="_next" value="http://localhost:8080/#contacto?exito=true">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Nuevo mensaje desde Alsha Group">
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Nombre</label>
-                        <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Apellido</label>
-                        <input type="text" name="apellido" placeholder="Tu apellido" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Correo electrónico</label>
-                        <input type="email" name="email" required placeholder="correo@ejemplo.com" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Número de teléfono / Celular</label>
-                        <input type="tel" name="telefono" placeholder="932123456" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">¿Qué necesitas o qué incidencia/proyecto tienes?</label>
-                    <textarea name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu idea..." class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition resize-none"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg shadow-purple-500/20 hover:opacity-95 transition cursor-pointer text-center">
-                    ENVIAR MENSAJE DE CONTACTO →
-                </button>
-            </form>
-        </section>
+            <div><label for="nombre" class="block text-sm font-semibold mb-2">Nombre y apellido *</label>
+                <input id="nombre" name="nombre" autocomplete="name" required minlength="2" maxlength="100" class="campo" placeholder="¿Cómo te llamas?">
+            </div>
+            <div><label for="empresa" class="block text-sm font-semibold mb-2">Empresa o negocio (opcional)</label>
+                <input id="empresa" name="empresa" autocomplete="organization" maxlength="120" class="campo" placeholder="Nombre de tu negocio">
+            </div>
+            <div><label for="email" class="block text-sm font-semibold mb-2">Correo electrónico (opcional)</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="150" class="campo" placeholder="correo@ejemplo.com">
+            </div>
+            <div><label for="mensaje" class="block text-sm font-semibold mb-2">Cuéntanos qué necesitas *</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="1500" class="campo" placeholder="Describe tu negocio, idea o consulta."></textarea>
+            </div>
+            <label class="flex gap-3 items-start text-sm text-slate-300" for="consentimiento">
+                <input id="consentimiento" name="consentimiento" type="checkbox" required class="mt-1">
+                <span>He leído el <a href="#privacidad" class="underline text-purple-300">aviso de privacidad</a> y autorizo que me contacten para responder esta solicitud. *</span>
+            </label>
+            <p id="form-status" role="status" aria-live="polite" class="text-sm text-purple-200"></p>
+            <button id="solicitud-submit" type="submit" disabled class="w-full py-3.5 px-6 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-500 disabled:opacity-50">Enviar consulta por WhatsApp</button>
+            <p class="text-xs text-slate-400">Se abrirá WhatsApp con tu consulta. Pulsa Enviar allí para hacérnosla llegar.</p>
+            <noscript><p>Activa JavaScript para preparar el mensaje, o <a href="https://wa.me/51932341719" class="underline">escríbenos directamente por WhatsApp</a>.</p></noscript>
+            <p class="text-sm text-slate-300">También puedes escribir a <a class="underline text-purple-300 break-all" href="mailto:gustavomontes2603@gmail.com">gustavomontes2603@gmail.com</a>.</p>
+        </form>
+    </section>
 
     <!-- PREGUNTAS FRECUENTES -->
     <section class="py-24 px-6 border-t border-slate-900 bg-[#0b0f19]">
@@ -404,35 +412,43 @@
             </div>
             <div class="space-y-4">
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
+                    <summary class="font-bold text-white cursor-pointer">¿Cómo solicito ALSHAFACTURAS?</summary>
+                    <p class="text-slate-400 text-sm mt-4">Selecciona ALSHAFACTURAS SaaS en el formulario y envía tu consulta por WhatsApp. Como está en desarrollo, confirmaremos disponibilidad y condiciones antes de ofrecerte una suscripción.</p>
+                </details>
+                <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
                     <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
                         ¿Cuánto tiempo toma desarrollar una página web?
-                        <i class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                        <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
-                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Depende del alcance, pero un perfil profesional o landing page toma entre 3 a 5 días hábiles con estructura completa y adaptabilidad móvil.</p>
+                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">El plazo depende del alcance, el contenido y las integraciones. Antes de iniciar te enviaremos una propuesta con entregables y fechas acordadas.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
                     <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
                         ¿Incluyen hosting y dominio en el servicio?
-                        <i class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                        <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
-                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Te asesoramos en la adquisición o configuramos despliegues gratuitos optimizados como Vercel, Netlify o servidores VPS según requieras.</p>
+                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Se especifica en cada cotización: si se incluyen, por cuánto tiempo, quién es el titular y cuánto cuesta renovarlos. El mantenimiento se detalla por separado.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
                     <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
                         ¿La página web será adaptable a teléfonos móviles?
-                        <i class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                        <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
                     <p class="text-slate-400 text-xs mt-4 leading-relaxed">Sí, el diseño es 100% responsive, garantizando una excelente visualización y experiencia de usuario en celulares, tablets y PC.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
                     <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
                         ¿Brindan soporte técnico posterior al lanzamiento?
-                        <p class="text-slate-400 text-xs mt-4 leading-relaxed">Absolutamente, aplicamos gestión de incidencias y mantenimiento continuo alineados a buenas prácticas de soporte TI.</p>
+                        <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                    </summary>
+                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Sí. La cotización detalla el periodo de soporte incluido y las condiciones del mantenimiento posterior. Las nuevas funciones se cotizan según su alcance.</p>
                 </details>
             </div>
         </div>
     </section>
 
+
+    </main>
     <!-- FOOTER -->
     <footer class="py-12 px-6 border-t border-slate-900 bg-[#090c14] text-xs text-slate-400">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-8">
@@ -440,11 +456,20 @@
                 <span class="text-white font-bold block mb-2 text-sm">ALSHA GROUP</span>
                 <p class="text-slate-400 leading-relaxed">Soluciones digitales a medida para hacer crecer tu marca.</p>
                 <span class="text-[10px] text-slate-400 block mt-2">Desarrollo web &bull; Software &bull; Productos SaaS</span>
+                <!-- Aviso desplegable integrado en la columna de la marca. -->
+                <details id="privacidad" class="mt-4 text-slate-400">
+                    <summary class="cursor-pointer text-purple-300 underline font-semibold">Aviso de privacidad</summary>
+                    <div class="mt-3 space-y-3 leading-relaxed">
+                        <p>Gustavo Alonzo Montes Altamirano, responsable de Alsha Group, utilizará los datos que decidas enviar para atender tu consulta y coordinar una propuesta. Este formulario no guarda los datos en una base de datos ni los envía automáticamente.</p>
+                        <p>Al continuar, el mensaje se abrirá en WhatsApp, un servicio externo sujeto a sus propias condiciones y política de privacidad. No incluyas contraseñas, datos bancarios ni información sensible. No utilizaremos tu solicitud para enviarte publicidad sin una autorización adicional.</p>
+                        <p>Puedes consultar sobre tus datos o solicitar su eliminación de nuestros registros de contacto escribiendo a <a class="underline break-all" href="mailto:gustavomontes2603@gmail.com">gustavomontes2603@gmail.com</a>.</p>
+                    </div>
+                </details>
             </div>
             <div>
                 <span class="text-white font-bold block mb-2">Enlaces rápidos</span>
                 <ul class="space-y-1.5">
-                    <li><a href="#soluciones" class="hover:text-purple-400 transition">Soluciones</a></li>
+                    <li><a href="#soluciones" class="hover:text-purple-400 transition">Servicios y productos</a></li>
                     <li><a href="#proyectos" class="hover:text-purple-400 transition">Proyectos</a></li>
                     <li><a href="#sobre-mi" class="hover:text-purple-400 transition">Sobre mí</a></li>
                     <li><a href="#contacto" class="hover:text-purple-400 transition">Contacto</a></li>
@@ -453,28 +478,40 @@
             <div>
                 <span class="text-white font-bold block mb-2">Contacto y canales</span>
                 <p class="text-slate-400 mb-1">Lima, Perú</p>
-                <p class="text-slate-400 mb-1">+51 932 341 719</p>
-                <p class="text-slate-400 mb-3">gustavomontes2603@gmail.com</p>
-                <div class="flex gap-3">
-                    <a href="https://wa.me/51932341719" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp</a>
-                    <a href="#contacto" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-purple-400"></i> Correo</a>
+                    <a href="https://wa.me/51932341719" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5"><i aria-hidden="true" class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp</a>
+                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=gustavomontes2603%40gmail.com&amp;su=Informaci%C3%B3n%20sobre%20p%C3%A1ginas%20web%20-%20Alsha%20Group&amp;body=Hola%2C%20Alsha%20Group.%0A%0AMe%20interesa%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20desarrollo%20web.%0A%0ATipo%20de%20negocio%3A%20%0AP%C3%A1gina%20que%20necesito%3A%20"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5">
+    <i aria-hidden="true" class="fa-solid fa-envelope text-purple-400"></i>
+    Correo
+</a>
+                     <a href="https://www.tiktok.com/@alsha.group8"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5">
+    <i aria-hidden="true" class="fa-brands fa-tiktok"></i>
+    TikTok
+</a>
+<a href="https://www.instagram.com/alsha_group/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5">
+    <i aria-hidden="true" class="fa-brands fa-instagram text-purple-400"></i>
+    Instagram
+</a>
                 </div>
             </div>
         </div>
         <div class="max-w-7xl mx-auto pt-8 border-t border-slate-900 text-center flex flex-col sm:flex-row justify-between items-center text-slate-400">
             <p>&copy; 2026 Alsha Group &bull; Gustavo Montes. Todos los derechos reservados.</p>
-            <a href="#" class="hover:text-purple-400 mt-2 sm:mt-0 transition">Volver arriba &uarr;</a>
+            <a href="#inicio" class="hover:text-purple-400 mt-2 sm:mt-0 transition">Volver arriba &uarr;</a>
         </div>
     </footer>
-    <script>
-        if (window.location.search.includes('exito=true') || window.location.hash.includes('exito=true')) {
-            const msg = document.getElementById('mensaje-exito');
-            if (msg) msg.classList.remove('hidden');
-        }
-    </script>
+    <script src="/js/site.js" th:src="@{/js/site.js}" defer></script>
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/51932341719" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-slate-950 p-4 rounded-full shadow-2xl hover:bg-emerald-400 transition flex items-center justify-center text-2xl" aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/51932341719" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-slate-950 p-4 rounded-full shadow-2xl hover:bg-emerald-400 transition flex items-center justify-center text-2xl" aria-label="WhatsApp">
+        <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
     </a>
 
 </body>
