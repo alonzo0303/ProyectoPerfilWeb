@@ -1,120 +1,481 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Alsha Group | Creamos, diseñamos y arreglamos tu página web</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alsha Group | Software & Soluciones Digitales</title>
+    <link rel="icon" type="image/png" href="../imagenes/LogoAlsha.png" th:href="@{/imagenes/LogoAlsha.png}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-[#0b0f19] text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white">
 
-    <!-- BARRA DE NAVEGACIÓN FIJA -->
-    <header class="navbar">
-        <div class="nav-brand">
-            <img th:src="@{/imagenes/LogoAlsha.png}" alt="Alsha Group Logo" class="logo-img">
-            <div class="brand-text">
-                <span class="company-name">ALSHA GROUP</span>
-                <span class="tagline">creamos | diseñamos | arreglamos tu página web</span>
-            </div>
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+               <img src="../imagenes/LogoAlsha.png" th:src="@{/imagenes/LogoAlsha.png}" alt="Logo Alsha Group" class="w-9 h-9 object-contain rounded-lg">
+                <div>
+                    <span class="text-base font-extrabold tracking-wider text-white block leading-none">ALSHA GROUP</span>
+                    <span class="text-[10px] text-slate-400 tracking-wider block mt-1">SOFTWARE & SOLUCIONES DIGITALES</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#soluciones" class="hover:text-purple-400 transition">Soluciones</a>
+                <a href="#proyectos" class="hover:text-purple-400 transition">Proyectos</a>
+                <a href="#sobre-mi" class="hover:text-purple-400 transition">Sobre mí</a>
+                <a href="#contacto" class="hover:text-purple-400 transition">Contacto</a>
+            </nav>
+
+            <a href="#contacto" class="hidden md:flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-transparent text-white border border-slate-700 rounded-xl hover:border-purple-400 hover:bg-purple-500/10 transition">
+                Contáctanos <i class="fa-solid fa-arrow-up-right text-[10px]"></i>
+            </a>
         </div>
-        <nav class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#clientes">Clientes</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
     </header>
 
-    <!-- SECCIÓN DE BIENVENIDA (Banner Principal) -->
-    <section id="inicio" class="banner-principal">
-        <div class="container">
-            <div class="bienvenida-grid">
-                <div class="logo-bienvenida-box">
-                    <img th:src="@{/imagenes/LogoAlsha.png}" alt="Alsha Group Logo Profesional" class="logo-grande-ag">
-                </div>
-                <div class="texto-bienvenida-box">
-                    <h1>Nos enfocamos en hacer crecer tu marca personal. Desarrollamos soluciones a medida.</h1>
-                    <a href="#contacto" class="btn-impulsar">¡Impulsar! </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN NOSOTROS / VISIÓN -->
-    <section id="nosotros" class="seccion-nosotros">
-        <div class="container">
-            <h2>Nuestra visión es construir marcas de clase mundial</h2>
-            <p>Transformamos ideas de negocio en productos digitales excepcionales basados en datos.</p>
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
             
-            <div class="valores-grid">
-                <div class="item-valor">
-                    <h4>Apasionados por el trabajo</h4>
-                    <p>Sentimos entusiasmo y alegría por lo que hacemos cada día.</p>
+            <!-- Hero Text -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span> AGENCIA DE SOFTWARE &bull; PERÚ
                 </div>
-                <div class="item-valor">
-                    <h4>Equipo creativo</h4>
-                    <p>Diseñamos soluciones que impulsan marcas y generan resultados.</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+                    Tu siguiente gran idea, <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">hecha software.</span>
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Creamos páginas web y soluciones digitales para personas y negocios. De tu presencia profesional a las herramientas que hacen crecer tu empresa.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#soluciones" class="px-6 py-3.5 rounded-xl font-medium bg-purple-400 text-slate-950 hover:bg-purple-300 transition shadow-lg shadow-purple-500/20 flex items-center gap-2">
+                        Explorar soluciones <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="#sobre-mi" class="px-6 py-3.5 rounded-xl font-medium bg-slate-900/80 text-slate-300 border border-slate-800 hover:bg-slate-800 transition">
+                        Conoce quién está detrás &rarr;
+                    </a>
                 </div>
-                <div class="item-valor">
-                    <h4> Productos de calidad</h4>
-                    <p>La calidad se mide en qué tan bien satisfacemos las necesidades de nuestros clientes.</p>
+                <div class="pt-6 border-t border-slate-800/60 text-xs text-slate-400 flex flex-wrap gap-x-6 gap-y-2">
+                    <span>DESARROLLO WEB</span> &bull; <span>SOFTWARE A MEDIDA</span> &bull; <span>PRODUCTOS SAAS</span>
+                    <div class="w-full text-slate-400 text-[11px] mt-1">Una idea clara. Una solución a tu medida.</div>
+                </div>
+            </div>
+
+            <!-- Hero Code Mockup / Visual -->
+            <div class="lg:col-span-5">
+                <div class="bg-[#0f1523] p-5 rounded-2xl border border-slate-800/80 shadow-2xl relative">
+                    <div class="flex items-center justify-between pb-4 mb-3 border-b border-slate-800/80 text-xs text-slate-400">
+                        <span class="font-mono">alsha / nuestra-esencia.ts</span>
+                        <span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-mono">&lt;/&gt; Del problema al código</span>
+                    </div>
+                    <pre class="font-mono text-xs text-slate-300 overflow-x-auto leading-relaxed"><code><span class="text-slate-400">01</span>  <span class="text-slate-400">// Tecnología que resuelve</span>
+<span class="text-slate-400">02</span>  <span class="text-purple-400">const</span> <span class="text-blue-300">desarrollador</span> = {
+<span class="text-slate-400">03</span>    nombre: <span class="text-emerald-300">'Alsha Group'</span>,
+<span class="text-slate-400">04</span>    enfoque: [
+<span class="text-slate-400">05</span>      <span class="text-emerald-300">'Interfaces claras'</span>,
+<span class="text-slate-400">06</span>      <span class="text-emerald-300">'Soluciones útiles'</span>,
+<span class="text-slate-400">07</span>      <span class="text-emerald-300">'Mejora continua'</span>
+<span class="text-slate-400">08</span>    ],
+<span class="text-slate-400">09</span>    curiosidad: <span class="text-purple-300">true</span>
+<span class="text-slate-400">10</span>  };</code></pre>
+                    <div class="mt-4 p-3 rounded-xl bg-[#141b2d] border border-slate-800 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-code-commit text-purple-400"></i>
+                            <span class="text-slate-300 font-medium">Construyendo paso a paso</span>
+                        </div>
+                        <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tech Stack Ticker Bottom -->
+        <div class="max-w-7xl mx-auto w-full mt-16 pt-8 border-t border-slate-800/40 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center text-xs font-semibold text-slate-400 tracking-wider">
+            <div>JAVA</div>
+            <div>SPRING BOOT</div>
+            <div>REACT</div>
+            <div>TYPESCRIPT</div>
+            <div>POSTGRESQL & MYSQL</div>
+            <div>GIT & GITHUB</div>
+            <div>DOCKER</div>
+            <div>HTML & CSS</div>
+            <div>ANGULAR</div>
+            <div>PHP</div>
+            <div>C++</div> 
+            <div>ORACLE</div>
+        </div>
+    </section>
+
+<!-- SECCIÓN SOLUCIONES -->
+        <section id="soluciones" class="py-20 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 block">01 / Soluciones para tu siguiente paso</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Una solución para cada idea.</h2>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md">Servicios a medida y productos propios. Encuentra por dónde empezar.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tarjeta 1 -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 w-full overflow-hidden bg-slate-950">
+                            <img src="../imagenes/perfilweb.jpg" th:src="@{/imagenes/perfilweb.jpg}" alt="Presencia Digital" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">01 / Presencia Digital</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Tu perfil, en la web.</h3>
+                            <p class="text-slate-400 text-xs mb-4">Una página profesional para presentar quién eres, mostrar tu trabajo y facilitar que te contacten.</p>
+                            <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Diseño adaptable a celulares</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Proyectos, servicios y presentación</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Enlaces a tus canales de contacto</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contacto" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Consultar Perfil Web</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 w-full overflow-hidden bg-slate-950">
+                            <img src="../imagenes/paginaweb.jpg" th:src="@{/imagenes/paginaweb.jpg}" alt="Negocios Digitales" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">02 / Negocios Digitales</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Tu negocio, más cerca.</h3>
+                            <p class="text-slate-400 text-xs mb-4">Sitios institucionales, landing pages y tiendas e-commerce pensados para tu oferta y tus clientes.</p>
+                            <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Estructura y diseño de tu sitio</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Catálogo de productos o servicios</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Integraciones según el alcance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contacto" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Cotizar mi Página</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 (SaaS AlshaFacturas) -->
+                <div class="bg-slate-900/60 border border-purple-500/40 rounded-2xl overflow-hidden hover:border-purple-500/70 transition flex flex-col justify-between relative shadow-lg shadow-purple-900/10">
+                    <div>
+                        <div class="h-44 w-full overflow-hidden bg-slate-950 relative">
+                            <span class="absolute top-3 right-3 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-10 backdrop-blur-md">En desarrollo</span>
+                            <img src="../imagenes/facturas.jpg" th:src="@{/imagenes/facturas.jpg}" alt="Alshafacturas" class="w-full h-full object-cover opacity-85 hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400 block mb-2">03 / Producto SaaS</span>
+                            <h3 class="text-xl font-bold text-white mb-2">ALSHAFACTURAS</h3>
+                            <p class="text-slate-400 text-xs mb-4">Nuestro sistema en construcción para bodegas, minimarkets y almacenes. Una plataforma para organizar la operación comercial.</p>
+                            <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Ventas y punto de venta como objetivo</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Inventarios y Kardex planificados</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Facturación electrónica planificada</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#proyectos" class="block text-center py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition">Conocer el Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- SECCIÓN: PROYECTOS (02) -->
+    <!-- SECCIÓN PROYECTOS / CONSTRUCCIÓN -->
+        <section id="proyectos" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 block">02 / Proyectos e Ideas Propias</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Lo que estamos construyendo.</h2>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md">Proyectos que dan forma a Alsha Group. El proceso también es parte del proyecto.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-2xl">
+                <div class="lg:col-span-6 space-y-5">
+                    <span class="inline-block bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Software • En desarrollo
+                    </span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-white">ALSHAFACTURAS SaaS PRO</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Plataforma SaaS en desarrollo para la gestión de empresas, usuarios y suscripciones bajo arquitectura modular con Spring Boot y PostgreSQL.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">React</span>
+                        <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">Spring Boot</span>
+                        <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">PostgreSQL</span>
+                        <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">Docker</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-inner">
+                        <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-slate-400">ALSHAFACTURAS</span>
+                            <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">Vista conceptual</span>
+                        </div>
+                        
+                       <div class="relative group h-64 overflow-hidden">
+                            <img src="../imagenes/facturas.jpg" th:src="@{/imagenes/facturas.jpg}" alt="Dashboard AlshaFacturas" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-6">
+                                <div class="space-y-2">
+                                    <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg backdrop-blur-sm">
+                                        <span class="text-[10px] text-slate-500 font-bold uppercase block">Empresas</span>
+                                        <span class="text-xs text-white font-semibold">Multiempresa / Multi-tenant</span>
+                                    </div>
+                                    <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg backdrop-blur-sm">
+                                        <span class="text-[10px] text-slate-500 font-bold uppercase block">Acceso</span>
+                                        <span class="text-xs text-white font-semibold">Por roles y permisos (JWT)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- SECCIÓN: SOBRE MÍ (03) -->
+    <section id="sobre-mi" class="py-24 px-6 border-t border-slate-900 bg-[#0d121f]">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="text-xs font-mono text-purple-400 tracking-widest block">03 / LA PERSONA DETRÁS DE ALSHA</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                    Hola, soy Gustavo Montes. Construyo Alsha Group una desarrollo para ti.
+                </h2>
+                <div class="space-y-4 text-slate-400 text-sm leading-relaxed">
+                    <p>
+                        Soy Gustavo Alonzo Montes Altamirano, Ingeniero en Sistemas. Estoy orientado en el desarrollo web y la gestión de bases de datos. También tengo conocimientos de Angular, PHP, SQL, CSS y C++. A lo largo de este tiempo me he especializado en crear soluciones tecnológicas a medida, desde páginas web modernas y sistemas de gestión hasta la automatización de procesos. Además, soy fundador de Alsha Group, un proyecto donde impulsamos la digitalización de negocios con tecnología robusta y arquitectura moderna.
+                    </p>
+                    <p>
+                        Alsha Group nace de mi interés por crear herramientas que hagan más sencillo el trabajo de las personas y los negocios. Combino lo que aprendo con proyectos propios y una forma práctica de trabajar: entender, construir y mejorar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 space-y-4">
+                <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
+                    <span class="text-xs font-mono text-purple-400 block mb-2">01</span>
+                    <h3 class="text-white font-bold mb-1">Entender antes de construir</h3>
+                    <p class="text-xs text-slate-400">El mejor punto de partida es una necesidad clara.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
+                    <span class="text-xs font-mono text-purple-400 block mb-2">02</span>
+                    <h3 class="text-white font-bold mb-1">Cuidar la experiencia</h3>
+                    <p class="text-xs text-slate-400">Una solución debe ser útil y fácil de usar.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-[#121826] border border-slate-800">
+                    <span class="text-xs font-mono text-purple-400 block mb-2">03</span>
+                    <h3 class="text-white font-bold mb-1">Seguir aprendiendo</h3>
+                    <p class="text-xs text-slate-400">Cada proyecto es una oportunidad para hacerlo mejor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: SERVICIOS -->
-    <section id="servicios" class="seccion-servicios">
-        <div class="container">
-            <h2>Todos los servicios que tu negocio necesita</h2>
-            <p>Soluciones profesionales adaptadas exactamente a lo que tu marca requiere para destacar.</p>
-            <div class="grid-servicios">
-                <div class="card-servicio">
-                    <h3>Branding y estrategias digitales</h3>
-                    <p>La estrategia de marca consiste en desarrollar una identidad única que distinga tu negocio de la competencia.</p>
+    <!-- SECCIÓN: BASE TÉCNICA (04) -->
+    <section class="py-24 px-6 border-t border-slate-900 bg-[#0b0f19]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-mono text-purple-400 tracking-widest block mb-2">04 / NUESTRA BASE TÉCNICA</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Del diseño a la solución.</h2>
                 </div>
-                <div class="card-servicio">
-                    <h3>Diseño web y desarrollo de apps</h3>
-                    <p>Creamos sitios web y aplicaciones móviles funcionales, modernas y orientadas al usuario.</p>
+                <p class="text-slate-400 text-sm max-w-xs mt-4 md:mt-0">
+                    Herramientas para construir soluciones claras, mantenibles y escalables.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#121826] p-8 rounded-3xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Desarrollo web</h3>
+                    <p class="text-slate-400 text-sm mb-6">Interfaces claras y aplicaciones con una estructura que pueda crecer.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">HTML</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">CSS</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Angular</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">React</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">TypeScript</span>
+                    </div>
                 </div>
-                <div class="card-servicio">
-                    <h3>Marketing digital orientado a resultados</h3>
-                    <p>Conectamos tu marca con clientes potenciales a través de internet para generar crecimiento medible.</p>
+
+                <div class="bg-[#121826] p-8 rounded-3xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Backend y datos</h3>
+                    <p class="text-slate-400 text-sm mb-6">Lógica de negocio, organización de información y conexión entre servicios.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Java</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Spring Boot</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">PHP</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">SQL</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">PostgreSQL</span>
+                    </div>
                 </div>
-                <div class="card-servicio">
-                    <h3>Desarrollo de software a medida</h3>
-                    <p>Soluciones personalizadas adaptadas exactamente a los procesos de tu negocio.</p>
+
+                <div class="bg-[#121826] p-8 rounded-3xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-6">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Soporte y herramientas</h3>
+                    <p class="text-slate-400 text-sm mb-6">Resolución de incidencias y herramientas para desarrollar de forma ordenada.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Soporte TI</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Git / GitHub</span>
+                        <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Docker</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: CLIENTES / PORTAFOLIO -->
-    <section id="clientes" class="seccion-clientes">
-        <div class="container">
-            <h2>Portafolio y Clientes</h2>
-            <p>Desde emprendimientos hasta grandes empresas, acompañamos a marcas de todos los tamaños.</p>
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <h3>5+</h3>
-                    <p>Clientes satisfechos</p>
+    <!-- SECCIÓN: CONTACTO Y APARTADO DE CORREO (Cumpliendo requerimiento y PDF de clases) -->
+    <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="py-20 px-6 bg-slate-900/40 border-t border-slate-800/80">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-white mb-4">Tu idea merece un buen comienzo.</h2>
+                <p class="text-slate-400">Déjanos tus datos si prefieres que te contactemos por correo o teléfono directamente.</p>
+            </div>
+
+            <!-- Contenedor del mensaje de éxito con tu texto exacto -->
+            <div id="mensaje-exito" class="hidden max-w-xl mx-auto mb-6 p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl text-center font-medium">
+                <i class="fa-solid fa-circle-check mr-2"></i> ¡Pronto nos contactaremos contigo!
+            </div>
+
+            <form action="https://formsubmit.co/gustavomontes2603@gmail.com" method="POST" class="max-w-xl mx-auto bg-slate-900/80 p-8 rounded-2xl border border-slate-800 shadow-xl space-y-5">
+                <!-- Redirección para mantenerse en la propia página web -->
+                <input type="hidden" name="_next" value="http://localhost:8080/#contacto?exito=true">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde Alsha Group">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Nombre</label>
+                        <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Apellido</label>
+                        <input type="text" name="apellido" placeholder="Tu apellido" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
+                    </div>
                 </div>
-                <div class="stat-box">
-                    <h3>5+</h3>
-                    <p>Proyectos exitosos</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Correo electrónico</label>
+                        <input type="email" name="email" required placeholder="correo@ejemplo.com" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Número de teléfono / Celular</label>
+                        <input type="tel" name="telefono" placeholder="932123456" class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition">
+                    </div>
                 </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">¿Qué necesitas o qué incidencia/proyecto tienes?</label>
+                    <textarea name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu idea..." class="w-full bg-slate-950/70 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 transition resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg shadow-purple-500/20 hover:opacity-95 transition cursor-pointer text-center">
+                    ENVIAR MENSAJE DE CONTACTO →
+                </button>
+            </form>
+        </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="py-24 px-6 border-t border-slate-900 bg-[#0b0f19]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white mb-2">Preguntas frecuentes</h2>
+                <p class="text-slate-400 text-sm">Resolvemos tus dudas antes de iniciar tu proyecto.</p>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                        ¿Cuánto tiempo toma desarrollar una página web?
+                        <i class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                    </summary>
+                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Depende del alcance, pero un perfil profesional o landing page toma entre 3 a 5 días hábiles con estructura completa y adaptabilidad móvil.</p>
+                </details>
+                <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                        ¿Incluyen hosting y dominio en el servicio?
+                        <i class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                    </summary>
+                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Te asesoramos en la adquisición o configuramos despliegues gratuitos optimizados como Vercel, Netlify o servidores VPS según requieras.</p>
+                </details>
+                <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                        ¿La página web será adaptable a teléfonos móviles?
+                        <i class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
+                    </summary>
+                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Sí, el diseño es 100% responsive, garantizando una excelente visualización y experiencia de usuario en celulares, tablets y PC.</p>
+                </details>
+                <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                        ¿Brindan soporte técnico posterior al lanzamiento?
+                        <p class="text-slate-400 text-xs mt-4 leading-relaxed">Absolutamente, aplicamos gestión de incidencias y mantenimiento continuo alineados a buenas prácticas de soporte TI.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: CONTACTO -->
-    <section id="contacto" class="seccion-contacto">
-        <div class="container">
-            <h2>¿Listo para impulsar tu marca?</h2>
-            <p>Escríbenos o llámanos para conversar sobre tu proyecto web.</p>
-            <a href="/contacto" class="btn-impulsar">Chatear con un Asesor 🚀</a>
+    <!-- FOOTER -->
+    <footer class="py-12 px-6 border-t border-slate-900 bg-[#090c14] text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <span class="text-white font-bold block mb-2 text-sm">ALSHA GROUP</span>
+                <p class="text-slate-400 leading-relaxed">Soluciones digitales a medida para hacer crecer tu marca.</p>
+                <span class="text-[10px] text-slate-400 block mt-2">Desarrollo web &bull; Software &bull; Productos SaaS</span>
+            </div>
+            <div>
+                <span class="text-white font-bold block mb-2">Enlaces rápidos</span>
+                <ul class="space-y-1.5">
+                    <li><a href="#soluciones" class="hover:text-purple-400 transition">Soluciones</a></li>
+                    <li><a href="#proyectos" class="hover:text-purple-400 transition">Proyectos</a></li>
+                    <li><a href="#sobre-mi" class="hover:text-purple-400 transition">Sobre mí</a></li>
+                    <li><a href="#contacto" class="hover:text-purple-400 transition">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <span class="text-white font-bold block mb-2">Contacto y canales</span>
+                <p class="text-slate-400 mb-1">Lima, Perú</p>
+                <p class="text-slate-400 mb-1">+51 932 341 719</p>
+                <p class="text-slate-400 mb-3">gustavomontes2603@gmail.com</p>
+                <div class="flex gap-3">
+                    <a href="https://wa.me/51932341719" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp</a>
+                    <a href="#contacto" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-purple-400 text-white transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-purple-400"></i> Correo</a>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-slate-900 text-center flex flex-col sm:flex-row justify-between items-center text-slate-400">
+            <p>&copy; 2026 Alsha Group &bull; Gustavo Montes. Todos los derechos reservados.</p>
+            <a href="#" class="hover:text-purple-400 mt-2 sm:mt-0 transition">Volver arriba &uarr;</a>
+        </div>
+    </footer>
+    <script>
+        if (window.location.search.includes('exito=true') || window.location.hash.includes('exito=true')) {
+            const msg = document.getElementById('mensaje-exito');
+            if (msg) msg.classList.remove('hidden');
+        }
+    </script>
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/51932341719" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-slate-950 p-4 rounded-full shadow-2xl hover:bg-emerald-400 transition flex items-center justify-center text-2xl" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
