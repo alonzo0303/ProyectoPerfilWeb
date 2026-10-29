@@ -7,6 +7,9 @@
     <link rel="icon" type="image/webp" href="../imagenes/logo.webp" th:href="@{/imagenes/logo.webp}">
     <!-- CSS compilado: editar frontend/input.css y ejecutar npm run build:css. -->
     <link rel="stylesheet" href="/css/site.css" th:href="@{/css/site.css}">
+    <link rel="stylesheet"
+      href="/css/cabecera.css"
+      th:href="@{/css/cabecera.css}">
     <meta name="description" content="Alsha Group: desarrollo de páginas web, perfiles profesionales y software a medida en Perú. Solicita una cotización o información de ALSHAFACTURAS.">
     <meta property="og:title" content="Alsha Group | Software y soluciones digitales">
     <meta property="og:description" content="Páginas web para tu negocio y soluciones a medida. Conoce ALSHAFACTURAS y solicita información.">
@@ -19,39 +22,72 @@
 
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
     <!-- HEADER / NAVBAR -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md border-b border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#inicio" class="flex items-center gap-2 sm:gap-3" aria-label="Alsha Group, inicio">
-               <img src="../imagenes/logo.webp" th:src="@{/imagenes/logo.webp}" alt="Logo Alsha Group" width="66" height="36" class="w-10 sm:w-auto h-9 object-contain rounded-lg">
-                <div>
-                    <span class="text-[13px] sm:text-base font-extrabold tracking-wider text-white block leading-none">ALSHA GROUP</span>
-                    <span class="text-[8px] sm:text-[10px] text-slate-400 tracking-wider block mt-1">SOFTWARE & SOLUCIONES DIGITALES</span>
-                </div>
-            </a>
-            
-            <nav aria-label="Navegación principal" class="hidden lg:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#soluciones" class="hover:text-purple-400 transition">Servicios y productos</a>
-                <a href="#proyectos" class="hover:text-purple-400 transition">Proyectos</a>
-                <a href="#sobre-mi" class="hover:text-purple-400 transition">Sobre mí</a>
-                <a href="#contacto" class="hover:text-purple-400 transition">Contacto</a>
-            </nav>
+   <!-- Encabezado comercial de Alsha Group -->
+<header class="alsha-header">
 
-            <a href="#contacto" class="hidden lg:flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-transparent text-white border border-slate-700 rounded-xl hover:border-purple-400 hover:bg-purple-500/10 transition">
-                Contáctanos <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-        </div>
-        <button id="menu-toggle" type="button" class="lg:hidden absolute right-6 top-6 px-3 py-1 rounded-lg border border-slate-700" aria-controls="menu-movil" aria-expanded="false">Menú</button>
-        <nav id="menu-movil" aria-label="Navegación móvil" class="lg:hidden px-6 pb-5" hidden>
-            <a class="block py-3" href="#soluciones">Servicios y productos</a>
-            <a class="block py-3" href="#proyectos">ALSHAFACTURAS</a>
-            <a class="block py-3" href="#sobre-mi">Sobre mí</a>
-            <a class="block py-3" href="#contacto">Solicitar una cotización</a>
-        </nav>
-    </header>
+    <div class="alsha-header__bar">
+
+        <!-- Marca: conserva tu archivo actual de logo -->
+        <a href="#inicio"
+           class="alsha-brand"
+           aria-label="Alsha Group, inicio">
+
+            <img src="/imagenes/logo.webp"
+                 th:src="@{/imagenes/logo.webp}"
+                 alt=""
+                 width="80"
+                 height="48">
+
+            <span class="alsha-brand__text">
+                <span class="alsha-brand__name">
+                    ALSHA <span>GROUP</span>
+                </span>
+
+                <span class="alsha-brand__tagline">
+                    SOLUCIONES DIGITALES
+                </span>
+            </span>
+        </a>
+
+        <!-- Navegación de escritorio -->
+       <nav class="alsha-nav" aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#soluciones">Servicios</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+        <!-- Reserva espacio para los dispositivos del fondo -->
+        <div class="alsha-header__art" aria-hidden="true"></div>
+
+        <!-- Conserva este identificador: lo utiliza site.js -->
+        <button id="menu-toggle"
+                class="alsha-menu-toggle"
+                type="button"
+                aria-controls="menu-movil"
+                aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            Menú
+        </button>
+
+    </div>
+
+    <!-- Navegación móvil -->
+   <nav id="menu-movil"
+     class="alsha-mobile-nav"
+     aria-label="Navegación móvil"
+     hidden>
+    <a href="#inicio">Inicio</a>
+    <a href="#soluciones">Servicios</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contáctanos</a>
+</nav>
+
+</header>
     <main id="contenido">
 
     <!-- HERO SECTION -->
-    <section id="inicio" class="min-h-screen flex flex-col justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+    <section id="inicio" class="min-h-screen flex flex-col justify-center pt-12 pb-16 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
             
             <!-- Hero Text -->
