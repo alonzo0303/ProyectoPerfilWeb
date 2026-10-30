@@ -612,6 +612,68 @@
     <a href="https://wa.me/51932341719" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-slate-950 p-4 rounded-full shadow-2xl hover:bg-emerald-400 transition flex items-center justify-center text-2xl" aria-label="WhatsApp">
         <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
     </a>
+   <script>
+(() => {
+    const encabezado = document.querySelector(".alsha-header");
+    const botonMenu = document.getElementById("menu-toggle");
+
+    if (!encabezado) return;
+
+    let posicionAnterior = Math.max(0, window.scrollY);
+    let temporizador;
+
+    function ocultar() {
+        encabezado.classList.remove("encabezado-apareciendo");
+        encabezado.classList.add("encabezado-oculto");
+    }
+
+    function mostrar() {
+        if (!encabezado.classList.contains("encabezado-oculto")) {
+            return;
+        }
+
+        encabezado.classList.remove("encabezado-oculto");
+        encabezado.classList.add("encabezado-apareciendo");
+    }
+
+    window.addEventListener("scroll", () => {
+        const posicionActual = Math.max(0, window.scrollY);
+        const diferencia = posicionActual - posicionAnterior;
+
+        // Ignora movimientos mínimos.
+        if (Math.abs(diferencia) < 2) return;
+
+        posicionAnterior = posicionActual;
+        clearTimeout(temporizador);
+
+        const menuAbierto =
+            botonMenu?.getAttribute("aria-expanded") === "true";
+        const tieneFoco =
+            encabezado.contains(document.activeElement);
+
+        if (
+            diferencia > 0 &&
+            posicionActual > encabezado.offsetHeight &&
+            !menuAbierto &&
+            !tieneFoco
+        ) {
+            ocultar();
+        } else {
+            mostrar();
+        }
+
+        temporizador = setTimeout(mostrar, 600);
+    }, { passive: true });
+
+    encabezado.addEventListener("animationend", (evento) => {
+        if (evento.animationName === "revelar-encabezado") {
+            encabezado.classList.remove("encabezado-apareciendo");
+        }
+    });
+
+    encabezado.addEventListener("focusin", mostrar);
+})();
+</script>
 
 </body>
 </html>
