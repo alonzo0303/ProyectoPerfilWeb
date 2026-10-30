@@ -211,3 +211,62 @@ main[id],
         transition: none;
     }
 }
+@media (min-width: 1200px) {
+    .alsha-header {
+        background-color: #0b0f19;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(11, 15, 25, 0.45),
+                rgba(11, 15, 25, 0.85)
+            ),
+            url("../imagenes/cabecera-alsha.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+    }
+
+    .alsha-header__bar {
+        min-height: 80px;
+        padding: 10px 32px;
+    }
+
+    section[id],
+    main[id],
+    #privacidad {
+        scroll-margin-top: 96px;
+    }
+}
+/* Encabezado visible */
+.alsha-header {
+    transform: none;
+    clip-path: inset(0);
+    transition: none;
+}
+
+/* Se oculta mientras bajas */
+.alsha-header.encabezado-oculto {
+    clip-path: inset(0 100% 0 0);
+    pointer-events: none;
+}
+
+/* Al detenerte, se revela de izquierda a derecha */
+.alsha-header.encabezado-apareciendo {
+    animation: revelar-encabezado 1s linear both;
+}
+
+@keyframes revelar-encabezado {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .alsha-header.encabezado-apareciendo {
+        animation: none;
+    }
+}
