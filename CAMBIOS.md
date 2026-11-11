@@ -21,3 +21,8 @@ No se añadieron base de datos, pasarela de pago ni cuentas de cliente. Se deber
 
 - Un único botón «Enviar consulta por WhatsApp»: se retiró el paso intermedio «Preparar solicitud» y el segundo botón. Sigue siendo necesario enviar el mensaje dentro de WhatsApp.
 - Aviso de privacidad desplegable debajo de Alsha Group, en la primera columna del pie. El enlace del consentimiento lo abre.
+
+
+## Lectura, encuadres y visor de imágenes
+
+Mejora acotada sobre la rama fotos-servicios: textos de lectura a 16 px, marcos sin recortes y visor nativo de las cinco imágenes con zoom al tamaño original, cierre por Escape/fondo/botón, foco de regreso y alternativas sin JavaScript. Se conservan los archivos gráficos, la identidad, el encabezado, los títulos y el formulario. Se normaliza la ruta de recursos para Maven/Linux.

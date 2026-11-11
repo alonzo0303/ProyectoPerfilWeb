@@ -89,7 +89,7 @@
     <!-- HERO SECTION -->
     <section id="inicio" class="min-h-screen flex flex-col justify-center pt-12 pb-16 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
-            
+
             <!-- Hero Text -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">
@@ -156,7 +156,7 @@
             <div>HTML & CSS</div>
             <div>ANGULAR</div>
             <div>PHP</div>
-            <div>C++</div> 
+            <div>C++</div>
             <div>ORACLE</div>
         </div>
     </section>
@@ -168,21 +168,26 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 block">01 / Soluciones para tu siguiente paso</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white">Servicios y productos para tu negocio.</h2>
                 </div>
-                <p class="text-slate-400 text-sm max-w-md">Servicios a medida y productos propios. Encuentra por dónde empezar.</p>
+                <p class="text-slate-400 text-base max-w-md">Servicios a medida y productos propios. Encuentra por dónde empezar.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Tarjeta 1 -->
                 <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
                     <div>
-                        <div class="h-44 w-full overflow-hidden bg-slate-950">
-                            <img src="../imagenes/perfilweb.webp" th:src="@{/imagenes/perfilweb.webp}" alt="Presencia Digital" class="w-full h-full object-cover opacity-[0.85] hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="960" height="600">
+                        <div class="service-image-frame w-full overflow-hidden bg-slate-950">
+                            <a href="/imagenes/perfilweb.webp" th:href="@{/imagenes/perfilweb.webp}" class="image-preview"
+                               data-image-preview data-image-title="Perfil profesional" aria-label="Ampliar imagen: Perfil profesional"
+                               aria-haspopup="dialog" aria-controls="image-viewer" target="_blank" rel="noopener noreferrer">
+                            <img src="../imagenes/perfilweb.webp" th:src="@{/imagenes/perfilweb.webp}" alt="Presencia Digital" class="preview-image" loading="lazy" decoding="async" width="2172" height="724">
+                            <span class="image-preview__hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </a>
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">01 / Presencia Digital</span>
                             <h3 class="text-xl font-bold text-white mb-2">Tu perfil, en la web.</h3>
-                            <p class="text-slate-400 text-xs mb-4">Una página profesional para presentar quién eres, mostrar tu trabajo y facilitar que te contacten.</p>
-                            <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                            <p class="text-slate-400 text-base mb-4">Una página profesional para presentar quién eres, mostrar tu trabajo y facilitar que te contacten.</p>
+                            <ul class="space-y-2 text-base leading-relaxed text-slate-300 mb-6">
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Diseño adaptable a celulares</li>
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Proyectos, servicios y presentación</li>
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Enlaces a tus canales de contacto</li>
@@ -190,21 +195,26 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <a href="#contacto" data-servicio="Perfil profesional" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Solicitar mi perfil web</a>
+                        <a href="#contacto" data-servicio="Perfil profesional" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold transition min-h-[44px]">Solicitar mi perfil web</a>
                     </div>
                 </div>
 
                 <!-- Tarjeta 2 -->
                 <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition flex flex-col justify-between">
                     <div>
-                        <div class="h-44 w-full overflow-hidden bg-slate-950">
-                            <img src="../imagenes/paginaweb.webp" th:src="@{/imagenes/paginaweb.webp}" alt="Negocios Digitales" class="w-full h-full object-cover opacity-[0.85] hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="554" height="554">
+                        <div class="service-image-frame w-full overflow-hidden bg-slate-950">
+                            <a href="/imagenes/paginaweb.webp" th:href="@{/imagenes/paginaweb.webp}" class="image-preview"
+                               data-image-preview data-image-title="Página web para negocio" aria-label="Ampliar imagen: Página web para negocio"
+                               aria-haspopup="dialog" aria-controls="image-viewer" target="_blank" rel="noopener noreferrer">
+                            <img src="../imagenes/paginaweb.webp" th:src="@{/imagenes/paginaweb.webp}" alt="Negocios Digitales" class="preview-image" loading="lazy" decoding="async" width="2172" height="724">
+                            <span class="image-preview__hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </a>
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">02 / Negocios Digitales</span>
                             <h3 class="text-xl font-bold text-white mb-2">Tu negocio, más cerca.</h3>
-                            <p class="text-slate-400 text-xs mb-4">Sitios institucionales, landing pages y tiendas e-commerce pensados para tu oferta y tus clientes.</p>
-                            <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                            <p class="text-slate-400 text-base mb-4">Sitios institucionales, landing pages y tiendas e-commerce pensados para tu oferta y tus clientes.</p>
+                            <ul class="space-y-2 text-base leading-relaxed text-slate-300 mb-6">
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Estructura y diseño de tu sitio</li>
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Catálogo de productos o servicios</li>
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Integraciones según el alcance</li>
@@ -212,22 +222,27 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <a href="#contacto" data-servicio="Página web para negocio" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Cotizar mi página web</a>
+                        <a href="#contacto" data-servicio="Página web para negocio" class="block text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold transition min-h-[44px]">Cotizar mi página web</a>
                     </div>
                 </div>
 
                 <!-- Tarjeta 3 (SaaS AlshaFacturas) -->
                 <div class="bg-slate-900/60 border border-purple-500/40 rounded-2xl overflow-hidden hover:border-purple-500/70 transition flex flex-col justify-between relative shadow-lg shadow-purple-900/10">
                     <div>
-                        <div class="h-44 w-full overflow-hidden bg-slate-950 relative">
+                        <div class="service-image-frame w-full overflow-hidden bg-slate-950 relative">
                             <span class="absolute top-3 right-3 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-10 backdrop-blur-md">En desarrollo</span>
-                            <img src="../imagenes/facturas.webp" th:src="@{/imagenes/facturas.webp}" alt="Alshafacturas" class="w-full h-full object-cover opacity-[0.85] hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="1000" height="667">
+                            <a href="/imagenes/facturas.webp" th:href="@{/imagenes/facturas.webp}" class="image-preview"
+                               data-image-preview data-image-title="AlshaFacturas, vista conceptual" aria-label="Ampliar imagen: AlshaFacturas, vista conceptual"
+                               aria-haspopup="dialog" aria-controls="image-viewer" target="_blank" rel="noopener noreferrer">
+                            <img src="../imagenes/facturas.webp" th:src="@{/imagenes/facturas.webp}" alt="Alshafacturas" class="preview-image" loading="lazy" decoding="async" width="1860" height="845">
+                            <span class="image-preview__hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </a>
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400 block mb-2">03 / Producto SaaS</span>
                             <h3 class="text-xl font-bold text-white mb-2">ALSHAFACTURAS</h3>
-                            <p class="text-slate-400 text-xs mb-4">Nuestro sistema en construcción para bodegas, minimarkets y almacenes. Una plataforma para organizar la operación comercial.</p>
-                            <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                            <p class="text-slate-400 text-base mb-4">Nuestro sistema en construcción para bodegas, minimarkets y almacenes. Una plataforma para organizar la operación comercial.</p>
+                            <ul class="space-y-2 text-base leading-relaxed text-slate-300 mb-6">
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Ventas y punto de venta como objetivo</li>
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Inventarios y Kardex planificados</li>
                                 <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-purple-400 text-[10px]"></i> Facturación electrónica planificada</li>
@@ -235,7 +250,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <a href="#proyectos" class="block text-center py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition">Conocer el SaaS</a>
+                        <a href="#proyectos" class="block text-center py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold transition min-h-[44px]">Conocer el SaaS</a>
                     </div>
                 </div>
             </div>
@@ -249,7 +264,7 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2 block">02 / Proyectos e Ideas Propias</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white">Lo que estamos construyendo.</h2>
                 </div>
-                <p class="text-slate-400 text-sm max-w-md">Proyectos que dan forma a Alsha Group. El proceso también es parte del proyecto.</p>
+                <p class="text-slate-400 text-base max-w-md">Proyectos que dan forma a Alsha Group. El proceso también es parte del proyecto.</p>
             </div>
 
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-2xl">
@@ -258,10 +273,10 @@
                         Software • En desarrollo
                     </span>
                     <h3 class="text-2xl md:text-3xl font-extrabold text-white">ALSHAFACTURAS SaaS PRO</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p class="text-slate-400 text-base leading-relaxed">
                         Plataforma SaaS en desarrollo para la gestión de empresas, usuarios y suscripciones bajo arquitectura modular con Spring Boot y PostgreSQL.
                     </p>
-                    <p class="text-sm text-slate-300">¿Te interesa para tu negocio? Solicita información o acceso anticipado. La disponibilidad, las funciones y el precio se confirmarán antes de contratar; todavía no se activa una suscripción desde esta web.</p>
+                    <p class="text-base text-slate-300">¿Te interesa para tu negocio? Solicita información o acceso anticipado. La disponibilidad, las funciones y el precio se confirmarán antes de contratar; todavía no se activa una suscripción desde esta web.</p>
                     <a href="#contacto" data-servicio="ALSHAFACTURAS SaaS" class="inline-block px-5 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold">Solicitar información del SaaS</a>
                     <div class="flex flex-wrap gap-2 pt-2">
                         <span class="bg-slate-950 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium">React</span>
@@ -277,11 +292,16 @@
                             <span class="text-xs font-semibold text-slate-400">ALSHAFACTURAS</span>
                             <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">Vista conceptual</span>
                         </div>
-                        
-                       <div class="relative group h-64 overflow-hidden">
-                            <img src="../imagenes/facturas.webp" th:src="@{/imagenes/facturas.webp}" alt="Dashboard AlshaFacturas" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" width="1000" height="667">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-6">
-                                <div class="space-y-2">
+
+                       <div class="product-image-frame">
+                            <a href="/imagenes/facturas.webp" th:href="@{/imagenes/facturas.webp}" class="image-preview"
+                               data-image-preview data-image-title="AlshaFacturas, vista conceptual" aria-label="Ampliar imagen: AlshaFacturas, vista conceptual"
+                               aria-haspopup="dialog" aria-controls="image-viewer" target="_blank" rel="noopener noreferrer">
+                            <img src="../imagenes/facturas.webp" th:src="@{/imagenes/facturas.webp}" alt="Dashboard AlshaFacturas" class="preview-image" loading="lazy" decoding="async" width="1860" height="845">
+                            <span class="image-preview__hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </a>
+                            <div class="product-image-notes p-4">
+                                <div class="grid sm:grid-cols-2 gap-2">
                                     <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg backdrop-blur-sm">
                                         <span class="text-[10px] text-slate-500 font-bold uppercase block">Empresas</span>
                                         <span class="text-xs text-white font-semibold">Multiempresa / Multi-tenant</span>
@@ -343,14 +363,19 @@
 
             <!-- Fotografía -->
             <div class="lg:col-span-5">
-                <img src="/imagenes/gustavo-perfil.png"
+                <a href="/imagenes/gustavo-perfil.png" th:href="@{/imagenes/gustavo-perfil.png}" class="image-preview portrait-preview w-full max-w-sm mx-auto rounded-2xl border border-slate-800"
+                               data-image-preview data-image-title="Gustavo Montes" aria-label="Ampliar imagen: Gustavo Montes"
+                               aria-haspopup="dialog" aria-controls="image-viewer" target="_blank" rel="noopener noreferrer">
+                            <img src="/imagenes/gustavo-perfil.png"
                      th:src="@{/imagenes/gustavo-perfil.png}"
                      alt="Gustavo Montes, fundador de Alsha Group"
                      width="1254"
                      height="1254"
                      loading="lazy"
                      decoding="async"
-                     class="w-full max-w-sm mx-auto rounded-2xl border border-slate-800">
+                     class="preview-image">
+                            <span class="image-preview__hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </a>
             </div>
 
         </div>
@@ -365,7 +390,7 @@
                 <h3 class="text-white font-bold mb-1">
                     Entender antes de construir
                 </h3>
-                <p class="text-xs text-slate-400">
+                <p class="text-base text-slate-400">
                     El mejor punto de partida es una necesidad clara.
                 </p>
             </div>
@@ -377,7 +402,7 @@
                 <h3 class="text-white font-bold mb-1">
                     Cuidar la experiencia
                 </h3>
-                <p class="text-xs text-slate-400">
+                <p class="text-base text-slate-400">
                     Una solución debe ser útil y fácil de usar.
                 </p>
             </div>
@@ -389,7 +414,7 @@
                 <h3 class="text-white font-bold mb-1">
                     Seguir aprendiendo
                 </h3>
-                <p class="text-xs text-slate-400">
+                <p class="text-base text-slate-400">
                     Cada proyecto es una oportunidad para hacerlo mejor.
                 </p>
             </div>
@@ -407,7 +432,7 @@
                     <span class="text-xs font-mono text-purple-400 tracking-widest block mb-2">04 / NUESTRA BASE TÉCNICA</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Del diseño a la solución.</h2>
                 </div>
-                <p class="text-slate-400 text-sm max-w-xs mt-4 md:mt-0">
+                <p class="text-slate-400 text-base max-w-xs mt-4 md:mt-0">
                     Herramientas para construir soluciones claras, mantenibles y escalables.
                 </p>
             </div>
@@ -418,7 +443,7 @@
                         <i aria-hidden="true" class="fa-solid fa-code"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Desarrollo web</h3>
-                    <p class="text-slate-400 text-sm mb-6">Interfaces claras y aplicaciones con una estructura que pueda crecer.</p>
+                    <p class="text-slate-400 text-base mb-6">Interfaces claras y aplicaciones con una estructura que pueda crecer.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">HTML</span>
                         <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">CSS</span>
@@ -433,7 +458,7 @@
                         <i aria-hidden="true" class="fa-solid fa-database"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Backend y datos</h3>
-                    <p class="text-slate-400 text-sm mb-6">Lógica de negocio, organización de información y conexión entre servicios.</p>
+                    <p class="text-slate-400 text-base mb-6">Lógica de negocio, organización de información y conexión entre servicios.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Java</span>
                         <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Spring Boot</span>
@@ -448,7 +473,7 @@
                         <i aria-hidden="true" class="fa-solid fa-screwdriver-wrench"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Soporte y herramientas</h3>
-                    <p class="text-slate-400 text-sm mb-6">Resolución de incidencias y herramientas para desarrollar de forma ordenada.</p>
+                    <p class="text-slate-400 text-base mb-6">Resolución de incidencias y herramientas para desarrollar de forma ordenada.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Soporte TI</span>
                         <span class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 font-mono">Git / GitHub</span>
@@ -494,11 +519,11 @@
                 <input id="consentimiento" name="consentimiento" type="checkbox" required class="mt-1">
                 <span>He leído el <a href="#privacidad" class="underline text-purple-300">aviso de privacidad</a> y autorizo que me contacten para responder esta solicitud. *</span>
             </label>
-            <p id="form-status" role="status" aria-live="polite" class="text-sm text-purple-200"></p>
+            <p id="form-status" role="status" aria-live="polite" class="text-base text-purple-200"></p>
             <button id="solicitud-submit" type="submit" disabled class="w-full py-3.5 px-6 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-500 disabled:opacity-50">Enviar consulta por WhatsApp</button>
-            <p class="text-xs text-slate-400">Se abrirá WhatsApp con tu consulta. Pulsa Enviar allí para hacérnosla llegar.</p>
+            <p class="text-base text-slate-400">Se abrirá WhatsApp con tu consulta. Pulsa Enviar allí para hacérnosla llegar.</p>
             <noscript><p>Activa JavaScript para preparar el mensaje, o <a href="https://wa.me/51932341719" class="underline">escríbenos directamente por WhatsApp</a>.</p></noscript>
-            <p class="text-sm text-slate-300">También puedes escribir a <a class="underline text-purple-300 break-all" href="mailto:gustavomontes2603@gmail.com">gustavomontes2603@gmail.com</a>.</p>
+            <p class="text-base text-slate-300">También puedes escribir a <a class="underline text-purple-300 break-all" href="mailto:gustavomontes2603@gmail.com">gustavomontes2603@gmail.com</a>.</p>
         </form>
     </section>
 
@@ -507,40 +532,40 @@
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-extrabold text-white mb-2">Preguntas frecuentes</h2>
-                <p class="text-slate-400 text-sm">Resolvemos tus dudas antes de iniciar tu proyecto.</p>
+                <p class="text-slate-400 text-base">Resolvemos tus dudas antes de iniciar tu proyecto.</p>
             </div>
             <div class="space-y-4">
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
                     <summary class="font-bold text-white cursor-pointer">¿Cómo solicito ALSHAFACTURAS?</summary>
-                    <p class="text-slate-400 text-sm mt-4">Selecciona ALSHAFACTURAS SaaS en el formulario y envía tu consulta por WhatsApp. Como está en desarrollo, confirmaremos disponibilidad y condiciones antes de ofrecerte una suscripción.</p>
+                    <p class="text-slate-400 text-base mt-4">Selecciona ALSHAFACTURAS SaaS en el formulario y envía tu consulta por WhatsApp. Como está en desarrollo, confirmaremos disponibilidad y condiciones antes de ofrecerte una suscripción.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
-                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-base">
                         ¿Cuánto tiempo toma desarrollar una página web?
                         <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
-                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">El plazo depende del alcance, el contenido y las integraciones. Antes de iniciar te enviaremos una propuesta con entregables y fechas acordadas.</p>
+                    <p class="text-slate-400 text-base mt-4 leading-relaxed">El plazo depende del alcance, el contenido y las integraciones. Antes de iniciar te enviaremos una propuesta con entregables y fechas acordadas.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
-                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-base">
                         ¿Incluyen hosting y dominio en el servicio?
                         <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
-                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Se especifica en cada cotización: si se incluyen, por cuánto tiempo, quién es el titular y cuánto cuesta renovarlos. El mantenimiento se detalla por separado.</p>
+                    <p class="text-slate-400 text-base mt-4 leading-relaxed">Se especifica en cada cotización: si se incluyen, por cuánto tiempo, quién es el titular y cuánto cuesta renovarlos. El mantenimiento se detalla por separado.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
-                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-base">
                         ¿La página web será adaptable a teléfonos móviles?
                         <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
-                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Sí, el diseño es 100% responsive, garantizando una excelente visualización y experiencia de usuario en celulares, tablets y PC.</p>
+                    <p class="text-slate-400 text-base mt-4 leading-relaxed">Sí, el diseño es 100% responsive, garantizando una excelente visualización y experiencia de usuario en celulares, tablets y PC.</p>
                 </details>
                 <details class="bg-[#121826] p-6 rounded-2xl border border-slate-800 group">
-                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm">
+                    <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-base">
                         ¿Brindan soporte técnico posterior al lanzamiento?
                         <i aria-hidden="true" class="fa-solid fa-plus text-purple-400 group-open:rotate-45 transition"></i>
                     </summary>
-                    <p class="text-slate-400 text-xs mt-4 leading-relaxed">Sí. La cotización detalla el periodo de soporte incluido y las condiciones del mantenimiento posterior. Las nuevas funciones se cotizan según su alcance.</p>
+                    <p class="text-slate-400 text-base mt-4 leading-relaxed">Sí. La cotización detalla el periodo de soporte incluido y las condiciones del mantenimiento posterior. Las nuevas funciones se cotizan según su alcance.</p>
                 </details>
             </div>
         </div>
@@ -607,6 +632,25 @@
             <a href="#inicio" class="hover:text-purple-400 mt-2 sm:mt-0 transition">Volver arriba &uarr;</a>
         </div>
     </footer>
+    <!-- Visor nativo: foco y teclado dentro del diálogo; los enlaces funcionan también sin JavaScript. -->
+    <dialog id="image-viewer" class="image-viewer" aria-labelledby="image-viewer-title">
+        <div class="image-viewer__toolbar">
+            <h2 id="image-viewer-title">Imagen ampliada</h2>
+            <button id="image-viewer-close" type="button" autofocus>
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i> Cerrar
+            </button>
+        </div>
+        <div class="image-viewer__body">
+            <img id="image-viewer-image" alt="" decoding="async">
+            <p id="image-viewer-status" role="status" hidden></p>
+        </div>
+        <div class="image-viewer__actions">
+            <button id="image-viewer-zoom" class="image-viewer__zoom" type="button" aria-pressed="false" disabled>Ver al 100 %</button>
+            <a id="image-viewer-original" class="image-viewer__original" target="_blank" rel="noopener noreferrer">Abrir imagen original</a>
+        </div>
+        <p id="image-viewer-zoom-help" class="image-viewer__zoom-help" hidden>Desplázate por la imagen para ver los detalles.</p>
+    </dialog>
+    <script src="/js/image-viewer.js" th:src="@{/js/image-viewer.js}" defer></script>
     <script src="/js/site.js" th:src="@{/js/site.js}" defer></script>
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="https://wa.me/51932341719" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-slate-950 p-4 rounded-full shadow-2xl hover:bg-emerald-400 transition flex items-center justify-center text-2xl" aria-label="WhatsApp">
