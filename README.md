@@ -75,6 +75,18 @@ Se fijan las versiones de dependencias y se incluye `package-lock.json`. Los rec
 
 El puerto admite la variable `PORT`; por defecto utiliza 8080. No incluye claves ni contraseñas.
 
+## Diseño original y herramientas de operación
+
+Se recupera la presentación anterior: encabezado morado, bloque de código de inicio, tarjetas de servicios, sección de AlshaFacturas y fotografía en Sobre mí. Se mantienen el formulario y los contactos originales. El marcado visual y las hojas de estilo se compararon con el commit `b9d3e58`.
+
+Se conservan la corrección `Resources` → `resources` para Maven/Linux, las cabeceras de seguridad y la verificación automática en GitHub. El script de animación del encabezado se carga desde `site.js` para cumplir la política CSP, con el mismo comportamiento original.
+
+El [kit de operación](operacion/README.md) contiene plantillas de ventas, soporte, costos, calendario y generador local de indicadores. Necesita datos y responsables reales; no constituye un CRM conectado. La carpeta `operacion/` no es un recurso público de Spring Boot.
+
+La página vuelve al formulario original: no incluye los campos de plazo/presupuesto, errores personalizados, alternativas dinámicas o integración UTM del rediseño descartado. Para contactar se mantienen WhatsApp y correo tal como estaban antes.
+
+Consulta [la validación de la restauración](operacion/DISENO-Y-VALIDACION.md).
+
 ## Evolución para vender SaaS directamente
 
 Cuando ALSHAFACTURAS esté disponible, definir planes, condiciones y precios reales. Después integrar pagos y confirmación verificable en servidor, registro de empresas, acceso autenticado y activación de suscripciones en el SaaS. Un botón o una redirección de pago no bastan para activar una cuenta de forma segura.

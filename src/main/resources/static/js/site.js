@@ -75,3 +75,64 @@ updateService();
 document.querySelector('a[href="#privacidad"]').addEventListener('click', () => {
     document.getElementById('privacidad').open = true;
 });
+
+(() => {
+    const encabezado = document.querySelector(".alsha-header");
+    const botonMenu = document.getElementById("menu-toggle");
+
+    if (!encabezado) return;
+
+    let posicionAnterior = Math.max(0, window.scrollY);
+    let temporizador;
+
+    function ocultar() {
+        encabezado.classList.remove("encabezado-apareciendo");
+        encabezado.classList.add("encabezado-oculto");
+    }
+
+    function mostrar() {
+        if (!encabezado.classList.contains("encabezado-oculto")) {
+            return;
+        }
+
+        encabezado.classList.remove("encabezado-oculto");
+        encabezado.classList.add("encabezado-apareciendo");
+    }
+
+    window.addEventListener("scroll", () => {
+        const posicionActual = Math.max(0, window.scrollY);
+        const diferencia = posicionActual - posicionAnterior;
+
+        // Ignora movimientos mínimos.
+        if (Math.abs(diferencia) < 2) return;
+
+        posicionAnterior = posicionActual;
+        clearTimeout(temporizador);
+
+        const menuAbierto =
+            botonMenu?.getAttribute("aria-expanded") === "true";
+        const tieneFoco =
+            encabezado.contains(document.activeElement);
+
+        if (
+            diferencia > 0 &&
+            posicionActual > encabezado.offsetHeight &&
+            !menuAbierto &&
+            !tieneFoco
+        ) {
+            ocultar();
+        } else {
+            mostrar();
+        }
+
+        temporizador = setTimeout(mostrar, 600);
+    }, { passive: true });
+
+    encabezado.addEventListener("animationend", (evento) => {
+        if (evento.animationName === "revelar-encabezado") {
+            encabezado.classList.remove("encabezado-apareciendo");
+        }
+    });
+
+    encabezado.addEventListener("focusin", mostrar);
+})();

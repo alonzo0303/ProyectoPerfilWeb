@@ -37,3 +37,6 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# Registros privados de operación: conservarlos fuera del repositorio.
+operacion/datos/

@@ -21,3 +21,17 @@ No se añadieron base de datos, pasarela de pago ni cuentas de cliente. Se deber
 
 - Un único botón «Enviar consulta por WhatsApp»: se retiró el paso intermedio «Preparar solicitud» y el segundo botón. Sigue siendo necesario enviar el mensaje dentro de WhatsApp.
 - Aviso de privacidad desplegable debajo de Alsha Group, en la primera columna del pie. El enlace del consentimiento lo abre.
+
+
+## Mejora comercial y kit de operación
+
+Propuesta centrada en páginas web y software para negocios, servicios comparables, proceso de entrega, founder y referencias verificables. AlshaFacturas se mantiene explícitamente en desarrollo y se retira su visualización conceptual de producto. Formulario con validación accesible, plazo y presupuesto opcionales, alternativas por correo/WhatsApp e identificadores de campaña filtrados.
+
+Ruta Maven corregida de Resources a resources; CSP y cabeceras de seguridad, JavaScript sin scripts embebidos y verificación automática de builds y pruebas. Se conserva la identidad y el encabezado existente con ajuste de foco y movimiento reducido.
+
+Se entrega operacion/ con plantillas de ventas, soporte y costos, procedimientos, calendario, generador local de indicadores y matriz del estado de las quince áreas. Su uso con datos y responsables reales, los precios y la puesta en producción siguen pendientes. Validación: 11 pruebas Node y 3 pruebas HTTP Java aprobadas; mvnw verify genera el JAR. La revisión visual permanece pendiente por falta de scripts de diseño en el entorno.
+
+
+## Restauración visual solicitada
+
+Se descarta el rediseño comercial y se recupera la página del commit b9d3e58: estructura, estilos, tarjetas, bloque de código y fotografía originales. Se conservan las correcciones técnicas y el kit de operación. La documentación vigente describe esta restauración; la sección anterior registra el cambio que se reemplazó.
