@@ -80,3 +80,18 @@ El puerto admite la variable `PORT`; por defecto utiliza 8080. No incluye claves
 Cuando ALSHAFACTURAS esté disponible, definir planes, condiciones y precios reales. Después integrar pagos y confirmación verificable en servidor, registro de empresas, acceso autenticado y activación de suscripciones en el SaaS. Un botón o una redirección de pago no bastan para activar una cuenta de forma segura.
 
 Consulta `CAMBIOS.md` y `VALIDACION.md` para las correcciones y comprobaciones de esta entrega.
+
+
+## Lectura, encuadres y ampliación de imágenes
+
+Esta mejora parte de `mejora/fotos-servicios` (3c82d99), conservando sus imágenes y animación. Mantiene el encabezado, los títulos, colores, secciones y campos originales.
+
+- Párrafos y listas pasan de 12–14 px a 16 px. Los botones pequeños y las preguntas frecuentes se ajustan para facilitar la lectura; los campos usan 16 px.
+- Las tarjetas muestran la imagen completa con `object-fit: contain`. Los tamaños declarados corresponden a los archivos reales. Las etiquetas de la vista conceptual aparecen debajo para dejar visible la foto.
+- Las cinco imágenes de servicios, producto y presentación se pueden abrir en un visor con teclado o clic. Se cierra con Escape, botón Cerrar o fondo exterior. El foco vuelve al enlace original.
+- «Ver al 100 %» permite recorrer los detalles al tamaño original, también en una pantalla pequeña. «Ajustar a pantalla» recupera la vista completa. La región ampliada admite desplazamiento con flechas.
+- Sin JavaScript o sin soporte para dialog, el enlace abre la imagen original. Un fallo de carga muestra una alternativa para abrir el archivo.
+
+Se normalizó `src/main/Resources` a `src/main/resources`, como requieren Maven y sus rutas de recursos en Linux. No se modificaron los archivos de imagen ni la animación de cabecera.
+
+`npm test` incluye las regresiones del visor. No se agregaron dependencias. Las pruebas de navegador y sus límites están resumidos en `VALIDACION.md`.
