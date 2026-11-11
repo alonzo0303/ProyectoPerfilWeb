@@ -75,6 +75,18 @@ Se fijan las versiones de dependencias y se incluye `package-lock.json`. Los rec
 
 El puerto admite la variable `PORT`; por defecto utiliza 8080. No incluye claves ni contraseñas.
 
+## Mejora comercial y operación
+
+La web incluye comparación de servicios, proceso de entrega, diferenciación de AlshaFacturas, errores de formulario junto a cada campo y alternativas a WhatsApp/correo. Mantiene los contactos existentes y no registra consultas automáticamente.
+
+Consulta [el kit de operación](operacion/README.md) para ventas, soporte, contenido, costos, indicadores y el estado real de las 15 áreas. Las plantillas necesitan registros y responsables reales; no sustituyen un CRM conectado. La carpeta `operacion/` no es un recurso público de Spring Boot.
+
+El workflow `.github/workflows/verificar.yml` construye recursos, prueba JavaScript e indicadores y ejecuta las pruebas Java con JDK 21. El cambio de `Resources` a `resources` corrige la inclusión de plantillas y recursos en Linux.
+
+La política CSP requiere recursos propios y prohíbe scripts embebidos. No añadir scripts inline o CDN sin revisar esta política y sus implicaciones.
+
+Limitaciones visuales y de publicación: [diseño y validación](operacion/DISENO-Y-VALIDACION.md).
+
 ## Evolución para vender SaaS directamente
 
 Cuando ALSHAFACTURAS esté disponible, definir planes, condiciones y precios reales. Después integrar pagos y confirmación verificable en servidor, registro de empresas, acceso autenticado y activación de suscripciones en el SaaS. Un botón o una redirección de pago no bastan para activar una cuenta de forma segura.

@@ -7,7 +7,8 @@
     "watch:css": "tailwindcss -i ./frontend/input.css -o ./src/main/resources/static/css/site.css --watch",
     "vendor": "node scripts/copy-vendor.cjs",
     "build": "npm run vendor && npm run build:css",
-    "test": "node --test scripts/site.test.cjs"
+    "test": "node --test scripts/*.test.cjs",
+    "indicadores": "node scripts/indicadores.cjs"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17",

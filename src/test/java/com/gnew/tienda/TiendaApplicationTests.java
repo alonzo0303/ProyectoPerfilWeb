@@ -43,4 +43,17 @@ class TiendaApplicationTests {
             assertEquals(200, get(path).statusCode(), path);
         }
     }
+    @Test
+    void recursosYDocumentoIncluyenProteccionesSinScriptsEmbebidos() throws Exception {
+        for (String path : new String[] {"/", "/js/site.js", "/css/site.css"}) {
+            var response = get(path);
+            assertEquals("nosniff", response.headers().firstValue("X-Content-Type-Options").orElse(""));
+            assertEquals("DENY", response.headers().firstValue("X-Frame-Options").orElse(""));
+            String csp = response.headers().firstValue("Content-Security-Policy").orElse("");
+            assertTrue(csp.contains("script-src 'self'"));
+            assertFalse(csp.contains("unsafe-inline"));
+        }
+        assertFalse(get("/").body().contains("<script>"));
+    }
+
 }
