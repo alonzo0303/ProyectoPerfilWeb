@@ -15,6 +15,6 @@ Preparar cuatro semanas a partir de la fecha que Gustavo elija. No hay publicaci
 
 Texto de apoyo para presentar la oferta: «Alsha Group desarrolla perfiles profesionales, páginas web y software a medida. Cuéntanos qué necesitas y revisaremos alcance, fechas y precio antes de comenzar».
 
-Etiquetar enlaces con `utm_source`, `utm_medium` y `utm_campaign` usando letras, números, guion o guion bajo; por ejemplo, valores de origen `instagram`, medio `organic` y campaña `servicios_web`. El formulario solo incorpora esos identificadores válidos al mensaje que decide enviar el visitante; no instala rastreadores.
+Si se incorporan campañas más adelante, definir cómo registrar su origen en el CRM. La página restaurada no captura identificadores UTM ni instala rastreadores.
 
 Medir consultas realmente recibidas y oportunidades por pieza. Si una pieza tiene vistas y ninguna consulta, revisar público, claridad de la oferta y acción final antes de aumentar inversión. Guardar autorizaciones de cualquier cliente que aparezca y evitar capturas con información personal.

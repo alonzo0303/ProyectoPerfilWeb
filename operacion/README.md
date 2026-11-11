@@ -1,6 +1,6 @@
 # Operación de Alsha Group
 
-Este kit acompaña la mejora de la web. Contiene herramientas y procedimientos propuestos; no demuestra que exista un CRM conectado ni que estos procesos ya estén operando con clientes.
+Este kit se conserva después de restaurar el diseño original de la web. Contiene herramientas y procedimientos propuestos; no demuestra que exista un CRM conectado ni que estos procesos ya estén operando con clientes.
 
 ## Empezar
 
@@ -29,20 +29,20 @@ El informe calcula etapas comerciales, ganadas / (ganadas + perdidas), importes 
 
 | Área | Entregado | Qué falta para operar o validar |
 | --- | --- | --- |
-| 1. Propuesta | Titular concreto, oferta y diferenciación empresa/producto en la web | Contrastar el mensaje con clientes reales |
+| 1. Propuesta | Presentación original restaurada a petición del usuario | Cualquier cambio de mensaje debe respetar el diseño recuperado |
 | 2. Cliente prioritario | Públicos por oferta y preguntas de calificación | Elegir segmento con ventas, entrevistas y margen |
-| 3. Catálogo | Comparación de servicios y alcance sujeto a propuesta | Aprobar precios, exclusiones y capacidades de cada proyecto |
-| 4. Identidad | Marca existente conservada, textos y nuevos bloques consistentes | Validación visual en dispositivos y derechos de imágenes |
-| 5. Web comercial | CTA a cotización, proceso, formulario y alternativas | Desplegar el PR en el alojamiento oficial y probar canales |
-| 6. Confianza | Fundador real y repositorios comprobables; se retira la imagen conceptual del producto | Casos y testimonios autorizados con resultados verificables |
+| 3. Catálogo | Tarjetas originales de servicios y producto restauradas | Aprobar precios, exclusiones y capacidades de cada proyecto |
+| 4. Identidad | Diseño original recuperado; marcado visual y estilos comparados con b9d3e58 | Validación en dispositivos y derechos de imágenes |
+| 5. Web comercial | Página y formulario originales restaurados | Desplegar el PR en el alojamiento oficial y probar canales |
+| 6. Confianza | Presentación y retrato originales del fundador | Casos y testimonios autorizados con resultados verificables |
 | 7. Contenido | Calendario de cuatro semanas y guiones en `contenido.md` | Material real, revisión y publicación desde cuentas oficiales |
 | 8. Ventas | Plantilla de oportunidades y proceso de seguimiento | Importar en CRM privado, asignar responsables y registrar consultas |
 | 9. Inicio del cliente | Procedimiento y lista de aceptación | Aplicarlo en proyectos reales y medir activación |
 | 10. Producto | Estado de AlshaFacturas honesto y prioridades de validación | Acceso al código real: el repositorio localizado solo contiene README |
-| 11. Soporte | Formulario contextual, CSV y clasificación de incidentes | Horarios, responsables y condiciones aprobados |
+| 11. Soporte | Opción original del formulario, CSV y clasificación de incidentes | Horarios, responsables y condiciones aprobados |
 | 12. Rentabilidad | Plantilla de costos y cálculo de margen por moneda | Costos, horas, precios y criterios contables reales |
 | 13. Operación | Procedimientos y verificaciones automáticas en GitHub | Asignar y ejecutar las tareas internas |
 | 14. Seguridad | CSP, cabeceras, scripts propios y ruta Maven corregida | HTTPS, accesos del hosting, copias y prueba real de restauración |
-| 15. Medición | Identificadores UTM permitidos, evento sin PII y generador local | Registros reales y conexión a CRM/analítica si se decide usarla |
+| 15. Medición | Generador local de indicadores | Registros reales y conexión a CRM/analítica si se decide usarla; sin captura UTM ni eventos en el formulario restaurado |
 
 No se han cambiado precios, comprado herramientas, activado publicidad, enviado mensajes a clientes, publicado en redes ni configurado copias de infraestructura inaccesible.

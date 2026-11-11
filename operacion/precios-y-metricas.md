@@ -10,7 +10,7 @@ Registrar horas y costo reales al terminar. Comparar la rentabilidad entre tipos
 
 ## Revisión de gestión
 
-- Consultas recibidas: confirmadas en el canal de contacto. El evento `alsha:consulta-preparada` solo indica preparación local y no debe contarse como lead recibido.
+- Consultas recibidas: confirmadas en el canal de contacto. La preparación del mensaje o apertura de WhatsApp no demuestra que se envió. La página restaurada no emite eventos de analítica.
 - Oportunidades abiertas por etapa, responsable y próxima acción vencida.
 - Tasa de cierre: ganadas / (ganadas + perdidas) dentro de una cohorte consistente. Mantener pendientes fuera del denominador.
 - Ingresos y margen por moneda según registros completos y el mismo criterio contable. No sumar PEN y USD.

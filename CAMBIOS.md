@@ -30,3 +30,8 @@ Propuesta centrada en páginas web y software para negocios, servicios comparabl
 Ruta Maven corregida de Resources a resources; CSP y cabeceras de seguridad, JavaScript sin scripts embebidos y verificación automática de builds y pruebas. Se conserva la identidad y el encabezado existente con ajuste de foco y movimiento reducido.
 
 Se entrega operacion/ con plantillas de ventas, soporte y costos, procedimientos, calendario, generador local de indicadores y matriz del estado de las quince áreas. Su uso con datos y responsables reales, los precios y la puesta en producción siguen pendientes. Validación: 11 pruebas Node y 3 pruebas HTTP Java aprobadas; mvnw verify genera el JAR. La revisión visual permanece pendiente por falta de scripts de diseño en el entorno.
+
+
+## Restauración visual solicitada
+
+Se descarta el rediseño comercial y se recupera la página del commit b9d3e58: estructura, estilos, tarjetas, bloque de código y fotografía originales. Se conservan las correcciones técnicas y el kit de operación. La documentación vigente describe esta restauración; la sección anterior registra el cambio que se reemplazó.
